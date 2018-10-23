@@ -1,0 +1,23 @@
+{
+  "name": "ui-kit",
+  "version": "1.0.0",
+  "description": "second task from FSD",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yur-ok/FSD_UI-KIT.git"
+  },
+  "keywords": [
+    "jquery",
+    "ui"
+  ],
+  "author": "Yuriy B.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yur-ok/FSD_UI-KIT/issues"
+  },
+  "homepage": "https://github.com/Yur-ok/FSD_UI-KIT#readme"
+}
