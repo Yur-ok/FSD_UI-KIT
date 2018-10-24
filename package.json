@@ -4,7 +4,9 @@
   "description": "second task from FSD",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack-dev-server --progress --colors",
+    "build": "webpack",
+    "prod": "webpack -p"
   },
   "repository": {
     "type": "git",
