@@ -21,7 +21,7 @@ module.exports = {
     mode: 'development',
     context: path.resolve(__dirname, './'),
     entry: {
-        main: './index.js'
+        main: './index.js',
     },
 
     output: {
@@ -82,6 +82,10 @@ module.exports = {
     },
 
     plugins: [
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
+        }),
         new CleanWebpackPlugin('docs', {}),
         new MiniCssExtractPlugin({
             filename: 'style.[hash].css',
