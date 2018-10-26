@@ -3,9 +3,13 @@ section.stdBtns
     .buttons
         .pressed
             button.button.button__small.button-color__green.button__pressed button
+                img(src=require("./rippleEffect.png"))
             button.button.button__big.button-color__green.button__pressed button
+                img(src=require("./rippleEffect.png"))
             button.button.button__big.button-color__orange.button__pressed button
+                img(src=require("./rippleEffect.png"))
             button.button.button__small.button-color__orange.button__pressed button
+                img(src=require("./rippleEffect.png"))
 
         .hovered
             button.button.button__small.button-color__green.button__hovered button
@@ -13,7 +17,7 @@ section.stdBtns
             button.button.button__big.button-color__orange.button__hovered button
             button.button.button__small.button-color__orange.button__hovered button
         .inactive
-            button.button.button__small.button-color__green.button__inactive button
-            button.button.button__big.button-color__green.button__inactive button
-            button.button.button__big.button-color__orange.button__inactive button
-            button.button.button__small.button-color__orange.button__inactive button
+            button(data-ripplet).button.button__small.button-color__green button
+            button(data-ripplet).button.button__big.button-color__green button
+            button(data-ripplet).button.button__big.button-color__orange button
+            button(data-ripplet).button.button__small.button-color__orange button
