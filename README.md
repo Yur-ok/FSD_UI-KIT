@@ -4,7 +4,7 @@ Educational project for FSD
 
 ## Preview
 
-Avaliable on GitHub Pages -> <a href="https://yur-ok.github.io/FSD_UI-KIT/" target="_blank">CV</a>
+Avaliable on GitHub Pages -> <a href="https://yur-ok.github.io/FSD_UI-KIT/" target="_blank">UI-KIT</a>
 
 ## Authors
 
