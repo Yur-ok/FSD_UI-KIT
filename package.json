@@ -23,12 +23,14 @@
   },
   "homepage": "https://github.com/Yur-ok/FSD_UI-KIT#readme",
   "devDependencies": {
-    "autoprefixer": "^9.2.1",
+    "autoprefixer": "^9.3.1",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^1.0.0",
     "file-loader": "^2.0.0",
     "html-webpack-plugin": "^3.2.0",
     "img-loader": "^3.0.1",
+    "jquery": "^3.3.1",
+    "jquery-ui": "^1.12.1",
     "mini-css-extract-plugin": "^0.4.3",
     "postcss": "^7.0.5",
     "postcss-loader": "^3.0.0",
@@ -37,10 +39,12 @@
     "style-loader": "^0.23.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
-    "webpack": "^4.19.1",
+    "webpack": "^4.23.1",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.8",
     "webpack-md5-hash": "0.0.6"
   },
-  "dependencies": {}
+  "dependencies": {
+    "ripplet.js": "^0.1.13"
+  }
 }

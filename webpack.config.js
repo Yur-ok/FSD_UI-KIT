@@ -8,20 +8,15 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 // Для отчистки дериктории назначения перед созданием сборки
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-
-//
 const WebpackMd5Hash = require('webpack-md5-hash');
-
-//
 const webpack = require('webpack');
-
 
 
 module.exports = {
     mode: 'development',
     context: path.resolve(__dirname, './'),
     entry: {
-        main: './index.js'
+        main: './index.js',
     },
 
     output: {
@@ -82,6 +77,10 @@ module.exports = {
     },
 
     plugins: [
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
+        }),
         new CleanWebpackPlugin('docs', {}),
         new MiniCssExtractPlugin({
             filename: 'style.[hash].css',

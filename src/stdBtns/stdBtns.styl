@@ -1,0 +1,112 @@
+//mixins
+hovered_g()
+    color: $white
+    background-color: $green
+    border-color: $darkGreen
+
+hovered_o()
+    color: $white
+    background-color: $orange
+    border-color: $darkOrange
+
+//colors
+$green = #4eb7a8
+$darkGreen = #28a290
+$orange = #e75735
+$darkOrange = #bf3e1f
+$white = #fff
+
+.stdBtns__header
+    font-family: Arial, Calibri, sans-serif
+    text-align: center
+    margin: 82px 0 0 0
+    font-size: 18px
+    text-transform: uppercase
+    letter-spacing: 1px
+    word-spacing: 1px
+    font-weight: bold
+
+.buttons
+    margin-top: 72px
+    display: flex
+    flex-direction: column
+
+.buttons > *
+    margin: 0 auto
+
+.button
+    vertical-align: bottom
+    margin-right: 24px
+    margin-top: 20px
+    border-top: 1px
+    border-left: 1px
+    border-right: 1px
+    border-bottom: 3px
+    border-style: solid
+    border-radius 3px
+    text-transform: uppercase
+    background-color: $white
+    button: nth-child(4)
+    outline: none
+    &:not(.button__hovered):active
+        border-bottom-width: 1px
+
+.pressed button
+    margin-top: 0
+
+.button__small
+    width: 78px
+    height: 22px
+    font-size: 10px
+    border-bottom-width: 2px
+
+.button__big
+    width: 118px
+    height: 32px
+    font-size: 12px
+    border-bottom-width: 3px
+
+.button-color__green
+    border-color: $green
+    color: $green
+    &:hover
+        hovered_g()
+    & .button__hovered:hover:enabled
+        hovered_g()
+
+.button-color__orange
+    border-color: $orange
+    color: $orange
+    &:hover
+        hovered_o()
+
+.hovered,
+.pressed
+    & .button-color__green
+        hovered_g()
+    & .button-color__orange
+        hovered_o()
+
+.button__pressed
+    border-bottom-width: 1px
+    position: relative
+
+.pressed button:first-child > img
+    position: absolute
+    right: 20px
+    top: -10px
+
+.pressed button:nth-child(2) > img
+    position: absolute
+    top: -10px
+    right: 30%
+
+.pressed button:nth-child(3) > img
+    position: absolute
+    top: -10px
+    right: 7%
+
+.pressed button:last-child > img
+    position: absolute
+    top: -10px
+    right: 0
