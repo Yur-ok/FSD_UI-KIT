@@ -1,0 +1,13 @@
+// @direction - in which way will arrow show
+// @condition - hovered, inactive, disabled
+
+mixin arrowBtn(direction, condition)
+    if direction === 'right'
+        button.buttonArr(class= 'buttonArr-direction__' + direction + ' buttonArr-condition__' + condition)
+            svg(id="right" class="rightArrow" width='15px' height='25px')
+                path(d="M14.815,12.318 L2.969,24.163 L0.337,21.531 L9.597,12.271 L0.337,3.011 L2.969,0.379 L14.815,12.224 L14.768,12.271 L14.815,12.318 Z")
+
+    if direction === 'left'
+        button.buttonArr(class= 'buttonArr-direction__' + direction + ' buttonArr-condition__' + condition)
+            svg(id="left" class="leftArrow" width='15px' height='25px')
+                path(d="M14.663,21.531 L12.031,24.163 L0.185,12.318 L0.232,12.271 L0.185,12.224 L12.031,0.379 L14.663,3.011 L5.403,12.271 L14.663,21.531 Z")
