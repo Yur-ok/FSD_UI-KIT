@@ -31,13 +31,15 @@ $white = #fff
     display: flex
     flex-direction: column
 
-.buttons > *
+.pressed
+.hovered
+.inactive
     margin: 0 auto
 
 .button
     vertical-align: bottom
-    margin-right: 24px
-    margin-top: 20px
+    margin-right: 21px
+    margin-top: 21px
     border-top: 1px
     border-left: 1px
     border-right: 1px
@@ -50,6 +52,8 @@ $white = #fff
     outline: none
     &:not(.button__hovered):active
         border-bottom-width: 1px
+    &:last-child
+        margin-right: unset
 
 .pressed button
     margin-top: 0
@@ -80,7 +84,7 @@ $white = #fff
     &:hover
         hovered_o()
 
-.hovered,
+.hovered
 .pressed
     & .button-color__green
         hovered_g()
@@ -93,7 +97,7 @@ $white = #fff
 
 .pressed button:first-child > img
     position: absolute
-    right: 20px
+    right: 22px
     top: -10px
 
 .pressed button:nth-child(2) > img
@@ -109,4 +113,4 @@ $white = #fff
 .pressed button:last-child > img
     position: absolute
     top: -10px
-    right: 0
+    right: -18px
