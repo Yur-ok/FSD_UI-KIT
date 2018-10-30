@@ -1,2 +1,5 @@
 section.percentages
     h1.percentages__header Percentages / Pie chart
+    .pie-container
+        each val in [ 1 , 2 , 3 , 4 , 5 ]
+            div(class= 'pie' id= 'pie_' + val)
