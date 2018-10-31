@@ -1,32 +1,45 @@
 @import "../variablesStyl/variables.styl"
 
 .percentages
-    margin-top: 47px
+    margin-top: 49px
     &__header
         CommonFonts()
         letter-spacing: 0.2px
 
 .pie-container
     display: flex
-    justify-content: space-between
-    padding: 2px 50px 0
+    justify-content: space-evenly
+    padding: 0 50px 0
+
+.pie
+    &:nth-child(1)
+        & .jchart__donut
+            margin-left: -20px
+
+    ^[0]:nth-child(2)
+        & .jchart__donut
+            margin-left: -28px
+
+    ^[0]:nth-child(3)
+        & .jchart__donut
+            margin-left: -13px
+
+    ^[0]:nth-child(4)
+        & .jchart__donut
+            margin-left: -1px
+
+    ^[0]:last-child
+        & .jchart__donut
+            margin-left: 6px
 
 .pie
     width: 110px
-    height: auto
 
 .jchart
     width: 100%
-    //height: 100%
     &__figure
         margin: 0
-
-//
-//.jchart__body
-//    width: 100%
-//    height: 100%
 
 .jchart__summary
     font-family: Tahoma, Calibri, sans-serif;
     alignment-baseline central
-    //font-size: 10px
