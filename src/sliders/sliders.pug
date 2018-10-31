@@ -1,0 +1,9 @@
+section.sliders
+    h1.sliders__header Sliders
+    .sliders-container
+        .sliderDiv__left
+            form
+                input(type='range' name='foo' id='leftSl' min='0' max='100' value='40').slider-left
+                output( for="foo" onforminput="value = foo.valueAsNumber;")
+        .sliderDiv__right
+            input(type='range' id='rightSl').slider-right
