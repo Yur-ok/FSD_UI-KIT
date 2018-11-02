@@ -1,49 +1,19 @@
 $(document).ready(function () {
-    // DOM Ready
-    var el, newPoint, newPlace, offset;
+    $("body").append('<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/flick/jquery-ui.css">');
+    $(".slider")
+        .slider({
+            min: 0,
+            max: 100,
+            step: 25,
+        })
+        .slider("pips", {
+            rest: 'label'
+        });
 
-// Select all range inputs, watch for change
-    $("input[type='range']").change(function () {
-
-        // Cache this for efficiency
-        el = $(this);
-
-        // Measure width of range input
-        width = el.width();
-
-        // Figure out placement percentage between left and right of input
-        newPoint = (el.val() - el.attr("min")) / (el.attr("max") - el.attr("min"));
-
-        offset = -1;
-
-        // Prevent bubble from going beyond left or right (unsupported browsers)
-        if (newPoint < 0) {
-            newPlace = 0;
-        }
-        else if (newPoint > 1) {
-            newPlace = width;
-        }
-        else {
-            newPlace = width * newPoint + offset;
-            offset -= newPoint;
-        }
-
-        // Move bubble
-        el
-            .next("output")
-            .css({
-                left: newPlace,
-                marginLeft: offset + "%"
-            })
-            .text(el.val());
-    })
-    // Fake a change to position bubble at page load
-        .trigger('change');
 });
 
 
 /*
-var leftSlider = document.getElementById('leftSl');
 var rightSlider = document.getElementById('rightSl');
 
 noUiSlider.create(leftSlider, {

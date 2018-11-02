@@ -31,6 +31,16 @@ module.exports = {
 
     module: {
         rules: [
+            // {
+            //     test: /\.js$/,
+            //     exclude: /(node_modules|bower_components)/,
+            //     use: {
+            //         loader: 'babel-loader',
+            //         // options: {
+            //         //     presets: ['@babel/preset-env']
+            //         // }
+            //     }
+            // },
             {
                 test: /\.pug$/,
                 exclude: /(node_modules|.git)/,
@@ -49,6 +59,14 @@ module.exports = {
                     'postcss-loader',
                     'stylus-loader?resolve url'
                 ]
+            },            {
+                test: /\.css$/,
+                // exclude: /(node_modules|.git)/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'postcss-loader',
+                ]
             },
             {
                 test: /\.(eot|woff|woff2|ttf)$/,
@@ -60,7 +78,7 @@ module.exports = {
             },
             {
                 test: /\.(png|svg|jpe?g|gif)$/,
-                exclude: /(node_modules|.git)/,
+                // exclude: /(node_modules|.git)/,
                 loader: 'file-loader',
                 options: {
                     name: "./img/[name].[ext]",
@@ -79,7 +97,8 @@ module.exports = {
     plugins: [
         new webpack.ProvidePlugin({
             $: 'jquery',
-            jQuery: 'jquery'
+            jQuery: 'jquery',
+            // noUiSlider: 'nouislider',
         }),
         new CleanWebpackPlugin('docs', {}),
         new MiniCssExtractPlugin({
@@ -93,5 +112,6 @@ module.exports = {
             filename: 'index.html'
         }),
         new WebpackMd5Hash(),
+        // new webpack.HotModuleReplacementPlugin(),
     ]
 };
