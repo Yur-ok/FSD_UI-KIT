@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UI-KIT</title>
+  <link href="style.32a5221d28f166194194.css?32a5221d28f166194194" rel="stylesheet"></head>
+  <body>
+    <main>
+<section class="stdBtns">
+  <h1 class="stdBtns__header">Standard buttons</h1>
+  <div class="buttons">
+    <div class="pressed">
+      <button class="button button__small button-color__green button__pressed">button<img src="./img/rippleEffect.png"></button>
+      <button class="button button__big button-color__green button__pressed">button<img src="./img/rippleEffect.png"></button>
+      <button class="button button__big button-color__orange button__pressed">button<img src="./img/rippleEffect.png"></button>
+      <button class="button button__small button-color__orange button__pressed">button<img src="./img/rippleEffect.png"></button>
+    </div>
+    <div class="hovered">
+      <button class="button button__small button-color__green button__hovered">button</button>
+      <button class="button button__big button-color__green button__hovered">button</button>
+      <button class="button button__big button-color__orange button__hovered">button</button>
+      <button class="button button__small button-color__orange button__hovered">button</button>
+    </div>
+    <div class="inactive">
+      <button class="button button__small button-color__green" data-ripplet>button</button>
+      <button class="button button__big button-color__green" data-ripplet>button</button>
+      <button class="button button__big button-color__orange" data-ripplet>button</button>
+      <button class="button button__small button-color__orange" data-ripplet>button</button>
+    </div>
+  </div>
+</section>
+      <!-- @direction - in which way will arrow show-->
+      <!-- @condition - hovered, inactive, disabled-->
+      <section class="arrowBtns">
+        <h1 class="arrowBtns__header">Arrow buttons</h1>
+        <div class="arrows">
+          <div class="arrow-inactive">
+                  <button class="buttonArr buttonArr-direction__left buttonArr-condition__inactive">
+                    <svg class="leftArrow" id="left" width="15px" height="25px">
+                      <path d="M14.663,21.531 L12.031,24.163 L0.185,12.318 L0.232,12.271 L0.185,12.224 L12.031,0.379 L14.663,3.011 L5.403,12.271 L14.663,21.531 Z"></path>
+                    </svg>
+                  </button>
+                  <button class="buttonArr buttonArr-direction__right buttonArr-condition__inactive">
+                    <svg class="rightArrow" id="right" width="15px" height="25px">
+                      <path d="M14.815,12.318 L2.969,24.163 L0.337,21.531 L9.597,12.271 L0.337,3.011 L2.969,0.379 L14.815,12.224 L14.768,12.271 L14.815,12.318 Z"></path>
+                    </svg>
+                  </button>
+          </div>
+          <div class="arrow-disabled">
+                  <button class="buttonArr buttonArr-direction__left buttonArr-condition__disabled">
+                    <svg class="leftArrow" id="left" width="15px" height="25px">
+                      <path d="M14.663,21.531 L12.031,24.163 L0.185,12.318 L0.232,12.271 L0.185,12.224 L12.031,0.379 L14.663,3.011 L5.403,12.271 L14.663,21.531 Z"></path>
+                    </svg>
+                  </button>
+                  <button class="buttonArr buttonArr-direction__right buttonArr-condition__disabled">
+                    <svg class="rightArrow" id="right" width="15px" height="25px">
+                      <path d="M14.815,12.318 L2.969,24.163 L0.337,21.531 L9.597,12.271 L0.337,3.011 L2.969,0.379 L14.815,12.224 L14.768,12.271 L14.815,12.318 Z"></path>
+                    </svg>
+                  </button>
+          </div>
+          <div class="arrow-hovered">
+                  <button class="buttonArr buttonArr-direction__left buttonArr-condition__hovered">
+                    <svg class="leftArrow" id="left" width="15px" height="25px">
+                      <path d="M14.663,21.531 L12.031,24.163 L0.185,12.318 L0.232,12.271 L0.185,12.224 L12.031,0.379 L14.663,3.011 L5.403,12.271 L14.663,21.531 Z"></path>
+                    </svg>
+                  </button>
+                  <button class="buttonArr buttonArr-direction__right buttonArr-condition__hovered">
+                    <svg class="rightArrow" id="right" width="15px" height="25px">
+                      <path d="M14.815,12.318 L2.969,24.163 L0.337,21.531 L9.597,12.271 L0.337,3.011 L2.969,0.379 L14.815,12.224 L14.768,12.271 L14.815,12.318 Z"></path>
+                    </svg>
+                  </button>
+          </div>
+        </div>
+      </section>
+<section class="percentages">
+  <h1 class="percentages__header">Percentages / Pie chart</h1>
+  <div class="pie-container">
+    <div class="pie" id="pie_1"></div>
+    <div class="pie" id="pie_2"></div>
+    <div class="pie" id="pie_3"></div>
+    <div class="pie" id="pie_4"></div>
+    <div class="pie" id="pie_5"></div>
+  </div>
+</section>
+<section class="sliders">
+  <h1 class="sliders__header">Sliders</h1>
+  <div class="sliders-container">
+    <div class="sliderDiv__left">
+      <input class="slider-left color-2" id="leftSl" type="text" data-type="single" data-min="0" data-max="117" data-value="40" data-step="1" data-from="40" data-hide-min-max="true">
+    </div>
+    <div class="sliderDiv__right">
+      <input class="slider-right color-3" id="rightSl" type="text" data-type="single" data-min="0" data-max="100" data-step="25" data-value="75" data-from="75" data-grid="true" data-grid-margin="true" data-hide-from-to="true" data-hide-min-max="true">
+    </div>
+  </div>
+</section>
+    </main>
+  <script type="text/javascript" src="main.bandle.13bc7a468cf84eb9ed91.js?32a5221d28f166194194"></script></body>
+</html>
