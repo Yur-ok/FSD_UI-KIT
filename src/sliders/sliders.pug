@@ -2,7 +2,30 @@ section.sliders
     h1.sliders__header Sliders
     .sliders-container
         .sliderDiv__left
-            input(id='leftSl' type="range" ).slider-left
+            input(
+            id='leftSl'
+            type="text"
+            data-type="single"
+            data-min="0"
+            data-max="117"
+            data-value="40"
+            data-step="1"
+            data-from="40"
+            data-hide-min-max="true"
+            ).slider-left.color-2
+
         .sliderDiv__right
-            //input(type='range' id='rightSl').slider-right
-            .slider-left
+            input(
+            id='rightSl'
+            type='text'
+            data-type="single"
+            data-min="0"
+            data-max="100"
+            data-step="25"
+            data-value="75"
+            data-from="75"
+            data-grid="true"
+            data-grid-margin="true"
+            data-hide-from-to="true"
+            data-hide-min-max="true"
+            ).slider-right.color-3
