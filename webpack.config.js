@@ -51,7 +51,7 @@ module.exports = {
             },
             {
                 test: /\.styl$/,
-                exclude: /(node_modules|.git)/,
+                // exclude: /(node_modules|.git)/,
                 use: [
                     'style-loader',
                     MiniCssExtractPlugin.loader,
@@ -70,7 +70,7 @@ module.exports = {
             },
             {
                 test: /\.(eot|woff|woff2|ttf)$/,
-                exclude: /(node_modules|.git)/,
+                // exclude: /(node_modules|.git)/,
                 loader: 'file-loader',
                 options: {
                     name: "./fonts/[name].[ext]",
@@ -78,7 +78,7 @@ module.exports = {
             },
             {
                 test: /\.(png|svg|jpe?g|gif)$/,
-                // exclude: /(node_modules|.git)/,
+                exclude: /(node_modules|.git)/,
                 loader: 'file-loader',
                 options: {
                     name: "./img/[name].[ext]",

@@ -1,16 +1,6 @@
 import './style.styl';
 import 'jquery';
-import 'jquery-ui';
-import './src/vendors/jquery-ui-slider-pips/jquery-ui-slider-pips';
-import './src/vendors/jquery-ui-slider-pips/jquery-ui-slider-pips.css';
-import './src/vendors/jquery-ui-slider-pips/flick/jquery-ui-1.10.4.custom'
-import './src/vendors/jquery-ui-slider-pips/flick/jquery-ui-1.10.4.custom.css'
-
-// import 'jquery-ui-slider-pips';
-// import 'bootstrap-slider';
-// import 'bootstrap-slider/dist/css/bootstrap-slider.css'
-// import 'nouislider/distribute/nouislider.css'
-// import 'nouislider';
+import 'ion-rangeslider';
 
 
 //ripple effect for buttons
