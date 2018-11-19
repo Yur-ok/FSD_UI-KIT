@@ -1,7 +1,8 @@
 import './style.styl';
 import 'jquery';
 import 'ion-rangeslider';
-
+import 'bootstrap-slider';
+import 'bootstrap-slider/dist/css/bootstrap-slider.css';
 
 //ripple effect for buttons
 import { defaultOptions } from 'ripplet.js/es/ripplet-declarative';
