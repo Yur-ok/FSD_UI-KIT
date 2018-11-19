@@ -640,7 +640,7 @@ main {
   display: -webkit-box;
   display: flex;
 }
-#st.slider-horizontal {
+#st .slider-horizontal {
   width: 81%;
   margin: 17px auto;
 }
