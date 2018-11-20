@@ -1,6 +1,6 @@
 import './style.styl';
 import 'jquery';
-import 'jquery-ui';
+// import 'jquery-ui';
 
 //ripple effect for buttons
 import { defaultOptions } from 'ripplet.js/es/ripplet-declarative';
