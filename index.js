@@ -2,7 +2,6 @@ import './style.styl';
 import 'jquery';
 import 'ion-rangeslider';
 
-
 //ripple effect for buttons
 import { defaultOptions } from 'ripplet.js/es/ripplet-declarative';
 defaultOptions.color = 'rgba(230, 220, 255, .3)';
