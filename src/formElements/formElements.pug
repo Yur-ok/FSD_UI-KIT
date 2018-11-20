@@ -1,0 +1,19 @@
+section.elements
+    h1.elements__header Form elements
+
+    .elements-wrapper
+        .elements-wrapper__col1
+            form.formFields
+                input(type="text" placeholder="Your Name").formFields__name
+                .tooltip.error
+                    .tooltiptext error
+                input(type="email" placeholder="Your Email").formFields__email
+                .tooltip.thanks
+                    .tooltiptext thanks!
+                textarea(name="message" placeholder="Your Message").formFields__message
+                input(type="submit" value="submit").formFields__submit
+
+        .elements-wrapper__col2
+            include toggles/toggles
+
+            include tickBoxes/tickBoxes

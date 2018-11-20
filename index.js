@@ -3,6 +3,7 @@ import 'jquery';
 import 'ion-rangeslider';
 import 'bootstrap-slider';
 import 'bootstrap-slider/dist/css/bootstrap-slider.css';
+import "./src/vendors/ON-OFF-Toggle-Switches-Switcher/css/switcher.css"
 
 //ripple effect for buttons
 import { defaultOptions } from 'ripplet.js/es/ripplet-declarative';
