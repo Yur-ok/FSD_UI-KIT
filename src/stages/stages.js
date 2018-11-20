@@ -1,6 +1,6 @@
 $(document).ready(function () {
     //create slider
-    $('#exstage').slider();
+    $('#stage').slider();
 
     //change color for inner text on page load
     var tick = $(".slider-tick-container").children();
