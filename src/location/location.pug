@@ -1,0 +1,22 @@
+section.location
+    h1.location__header Location
+    .googleMap#map
+
+    script.
+        function initMap() {
+
+            var map = document.getElementById('map');
+            var options = {
+                zoom: 15,
+                center: {lan: 55.7558, lng: 37.6137}
+            };
+
+            var myMap = new google.maps.Map(map, options);
+            var marker = new google.maps.Marker({
+                position: {lan: 55.7558, lng: 37.6137},
+                map: myMap
+            });
+
+        }
+
+    script( async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCys9GVm6Don7yiHVDytBIG9r1JSi-d_ks&callback=initMap")
