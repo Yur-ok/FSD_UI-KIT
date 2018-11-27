@@ -29,8 +29,14 @@ main
         flex-direction: column
 @import "./src/newsEvents/newsEvents.styl"
 @import "./src/location/location.styl"
+
 .calendar-and-messaging
-    margin-top: 10px
+    display: flex
+    justify-content: space-between
+    & .calendar
+        width: 279px
+    & .messaging
+        width: 288px
 
 @import "./src/calendar/calendar.styl"
 @import "./src/messaging/messaging.styl"
