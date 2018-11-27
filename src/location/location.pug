@@ -1,0 +1,52 @@
+section.location
+    h1.location__header Location
+    .googleMap#map
+    .customMapControl
+        h2 Meet us!
+        p.
+            1259 California st
+            <br>
+            San Francisco, CA
+        .icons
+            img(src=require("./MyLocation.png"))#myLocation
+            img(src=require("./Pin.png"))#pin
+
+    script.
+        function initMap() {
+
+            var pin = document.getElementById('pin');
+
+            var pos = {lat: 37.795426, lng: -122.414854}
+            var map = document.getElementById('map');
+            var options = {
+                zoom: 14,
+                center: pos,
+                disableDefaultUI: true,
+                gestureHandling: 'greedy'
+            };
+
+            var myMap = new google.maps.Map(map, options);
+
+            var icon = {
+
+                path: "M39.839,23.849 C39.866,24.150 39.908,24.426 39.924,24.743 C39.924,24.743 37.037,42.497 21.147,55.018 L21.147,56.011 C20.926,55.848 20.717,55.680 20.500,55.515 C20.283,55.680 20.074,55.848 19.853,56.011 L19.853,55.018 C3.963,42.497 1.076,24.743 1.076,24.743 C1.092,24.421 1.134,24.140 1.162,23.836 C0.912,22.583 0.777,21.288 0.777,19.962 C0.777,9.068 9.607,0.238 20.500,0.238 C31.393,0.238 40.223,9.068 40.223,19.962 C40.223,21.293 40.091,22.593 39.839,23.849 Z",
+                fillColor: '#e75735',
+                fillOpacity: .6,
+                anchor: new google.maps.Point(0, 0),
+                strokeWeight: 0,
+                scale: 1
+            };
+
+            var marker = new google.maps.Marker({
+                position: pos,
+                map: myMap,
+                icon: icon
+            });
+
+            pin.addEventListener('click', function () {
+                map.setCenter(pos);
+            });
+
+        }
+
+    script( async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmnW2E9v4j_HBoc9oaqM9R-dWm-_UxcrA&callback=initMap")
