@@ -1176,6 +1176,66 @@ textarea::placeholder {
   font-size: 18px;
   margin: 0;
 }
+.news-and-events {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  margin-top: 31px;
+}
+.news-and-events .article,
+.news-and-events .event {
+  display: -webkit-box;
+  display: flex;
+  width: 288px;
+  height: 212px;
+}
+.news-and-events .article-right {
+  background-color: #e75735;
+  color: #fff;
+  padding: 20px 24px;
+}
+.news-and-events .article-right h2 {
+  font-size: 26px;
+  margin: 0 0 7px 0;
+}
+.news-and-events .article-right h3 {
+  font-size: 11px;
+  margin: 0 0 14px 0;
+}
+.news-and-events .article-right p {
+  font-size: 12px;
+  margin: 0;
+}
+.event-right {
+  background-color: #4eb7a8;
+  color: #fff;
+  padding: 9px 21px;
+}
+.event-right h2 {
+  font-size: 30px;
+  margin: 0 0 5px 0;
+}
+.event-right h2 span {
+  font-size: 73px;
+}
+.event-right h3 {
+  font-size: 12.5px;
+  text-transform: uppercase;
+  margin: 0 0 5px 0;
+}
+.event-right p {
+  font-size: 12px;
+  margin: 0;
+}
+#forCalendar {
+  margin: 18px 0 0 10px;
+  width: 128px;
+  height: 26px;
+  font-size: 10px;
+  font-weight: bold;
+  border-color: #379285;
+}
 .location {
   margin-top: 52px;
   margin-bottom: 54px;
@@ -1347,5 +1407,20 @@ textarea::placeholder {
   color: #fff;
   background-color: #4eb7a8;
   border-color: #28a290;
+}
+.video {
+  margin-top: 50px;
+}
+.video__header {
+  font-family: Arial, Calibri, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.video .player {
+  height: 336px;
 }
 
