@@ -1,6 +1,5 @@
 @import "../variablesStyl/variables.styl"
 
-
 //mixins
 hovered_g()
     color: $white
@@ -12,16 +11,10 @@ hovered_o()
     background-color: $orange
     border-color: $darkOrange
 
-
-.stdBtns__header
-    font-family: Arial, Calibri, sans-serif
-    text-align: center
+.stdBtns
     margin: 82px 0 0 0
-    font-size: 18px
-    text-transform: uppercase
-    letter-spacing: 1px
-    word-spacing: 1px
-    font-weight: bold
+    &__header
+        CommonFonts()
 
 .buttons
     margin-top: 72px
