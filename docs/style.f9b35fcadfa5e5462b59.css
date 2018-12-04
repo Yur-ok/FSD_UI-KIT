@@ -1,3 +1,27 @@
+@font-face {
+  font-family: LatoBlack;
+  src: url(./fonts/Lato-Black.ttf);
+}
+@font-face {
+  font-family: LatoBold;
+  src: url(./fonts/Lato-Bold.ttf);
+}
+@font-face {
+  font-family: LatoLight;
+  src: url(./fonts/Lato-Light.ttf);
+}
+@font-face {
+  font-family: LatoRegular;
+  src: url(./fonts/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: sspLight;
+  src: url(./fonts/SourceSansPro-Light.ttf);
+}
+@font-face {
+  font-family: sspRegular;
+  src: url(./fonts/SourceSansPro-Regular.ttf);
+}
 body {
   display: -webkit-box;
   display: flex;
@@ -11,15 +35,16 @@ main {
   padding-left: 53px;
   padding-right: 53px;
 }
-.stdBtns__header {
-  font-family: Arial, Calibri, sans-serif;
-  text-align: center;
+.stdBtns {
   margin: 82px 0 0 0;
-  font-size: 18px;
+}
+.stdBtns__header {
+  font-family: LatoBlack;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  word-spacing: 1px;
-  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1.3px;
+  font-size: 18px;
+  margin: 0;
 }
 .buttons {
   margin-top: 72px;
@@ -133,10 +158,10 @@ main {
   margin-top: 56px;
 }
 .arrowBtns__header {
-  font-family: Arial, Calibri, sans-serif;
+  font-family: LatoBlack;
   text-transform: uppercase;
   text-align: center;
-  font-weight: bold;
+  letter-spacing: 1.3px;
   font-size: 18px;
   margin: 0;
   letter-spacing: 1px;
@@ -205,10 +230,10 @@ main {
   margin-top: 47px;
 }
 .percentages__header {
-  font-family: Arial, Calibri, sans-serif;
+  font-family: LatoBlack;
   text-transform: uppercase;
   text-align: center;
-  font-weight: bold;
+  letter-spacing: 1.3px;
   font-size: 18px;
   margin: 0;
   margin-bottom: 16px;
@@ -517,10 +542,10 @@ main {
   margin-top: 26px;
 }
 .sliders__header {
-  font-family: Arial, Calibri, sans-serif;
+  font-family: LatoBlack;
   text-transform: uppercase;
   text-align: center;
-  font-weight: bold;
+  letter-spacing: 1.3px;
   font-size: 18px;
   margin: 0;
   margin-bottom: 0;
@@ -635,10 +660,10 @@ main {
   position: relative;
 }
 .stages__header {
-  font-family: Arial, Calibri, sans-serif;
+  font-family: LatoBlack;
   text-transform: uppercase;
   text-align: center;
-  font-weight: bold;
+  letter-spacing: 1.3px;
   font-size: 18px;
   margin: 0;
   margin-bottom: 15px;
@@ -691,10 +716,10 @@ main {
   margin-top: 40px;
 }
 .tickBoxes-header {
-  font-family: Arial, Calibri, sans-serif;
+  font-family: LatoBlack;
   text-transform: uppercase;
   text-align: center;
-  font-weight: bold;
+  letter-spacing: 1.3px;
   font-size: 18px;
   margin: 0;
 }
@@ -763,10 +788,10 @@ h1.tickBoxes-header {
           transform: rotate(45deg);
 }
 .toggles-header {
-  font-family: Arial, Calibri, sans-serif;
+  font-family: LatoBlack;
   text-transform: uppercase;
   text-align: center;
-  font-weight: bold;
+  letter-spacing: 1.3px;
   font-size: 18px;
   margin: 0;
 }
@@ -832,10 +857,10 @@ h1.toggles-header {
   margin-top: 27px;
 }
 .elements__header {
-  font-family: Arial, Calibri, sans-serif;
+  font-family: LatoBlack;
   text-transform: uppercase;
   text-align: center;
-  font-weight: bold;
+  letter-spacing: 1.3px;
   font-size: 18px;
   margin: 0;
 }
@@ -964,10 +989,10 @@ textarea::placeholder {
           flex-direction: column;
 }
 .searchDD__header {
-  font-family: Arial, Calibri, sans-serif;
+  font-family: LatoBlack;
   text-transform: uppercase;
   text-align: center;
-  font-weight: bold;
+  letter-spacing: 1.3px;
   font-size: 18px;
   margin: 0;
   letter-spacing: 0.6px;
@@ -1073,33 +1098,39 @@ textarea::placeholder {
           transform: rotate(225deg);
 }
 .userProfile__header {
-  font-family: Arial, Calibri, sans-serif;
+  font-family: LatoBlack;
   text-transform: uppercase;
   text-align: center;
-  font-weight: bold;
+  letter-spacing: 1.3px;
   font-size: 18px;
   margin: 0;
 }
 .boy {
   margin-top: 25px;
+}
+.boy,
+.girl {
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: end;
           justify-content: flex-end;
 }
-.photo {
-  width: 89px;
-  height: 89px;
+.boy .photo,
+.girl .photo {
+  width: 84px;
+  height: 84px;
   border-radius: 50%;
   background-color: #e5e5e5;
-  margin: auto 13px auto 0;
+  margin: 7px 17px 0 0;
   box-shadow: 0 0 0 4px #e5e5e5;
 }
-.photo img {
-  width: 89px;
-  height: 89px;
+.boy .photo img,
+.girl .photo img {
+  background-size: cover;
 }
-.info {
+.boy .info,
+.girl .info {
+  margin-top: 4px;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
@@ -1113,29 +1144,64 @@ textarea::placeholder {
   border-radius: 8px;
   position: relative;
 }
-.info .name {
+.boy .info .name,
+.girl .info .name {
   font-size: 18px;
   color: #e75735;
   margin-top: 13px;
   margin-bottom: 0;
 }
-.info .position {
+.boy .info .position,
+.girl .info .position {
   font-size: 11px;
   text-transform: uppercase;
   font-weight: bold;
   color: #4f4f4f;
   margin-top: 0;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
-.info .social-btns {
-  width: 95px;
+.boy .info .social-btns,
+.girl .info .social-btns {
+  width: 105px;
   height: 21px;
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: justify;
           justify-content: space-between;
+  position: relative;
 }
-.info::before {
+.boy .info .social-btns .fb,
+.girl .info .social-btns .fb,
+.boy .info .social-btns .twit,
+.girl .info .social-btns .twit,
+.boy .info .social-btns .drbl,
+.girl .info .social-btns .drbl {
+  position: absolute;
+}
+.boy .info .social-btns .fb,
+.girl .info .social-btns .fb {
+  width: 22px;
+  height: 22px;
+  fill: #f00;
+}
+.boy .info .social-btns .twit,
+.girl .info .social-btns .twit {
+  width: 40px;
+  height: 40px;
+  fill: #f00;
+  top: -15px;
+  left: 30px;
+}
+.boy .info .social-btns .drbl,
+.girl .info .social-btns .drbl {
+  width: 40px;
+  height: 40px;
+  fill: #f00;
+  top: -9px;
+  left: 70px;
+}
+.boy .info::before,
+.girl .info::before {
   content: "";
   position: absolute;
   top: calc(50% - 7px);
@@ -1144,10 +1210,18 @@ textarea::placeholder {
   border-style: solid;
   border-color: transparent #e5e5e5 transparent transparent;
 }
-.fb,
-.twit,
-.drbl {
-  width: 30px;
+.girl {
+  margin-top: 23px;
+}
+.girl .info {
+  background-color: #4eb7a8;
+}
+.girl .info .name,
+.girl .info .position {
+  color: #fff;
+}
+.girl .info::before {
+  border-color: transparent #4eb7a8 transparent transparent;
 }
 .search-and-userProfile {
   margin-top: 65px;
@@ -1169,10 +1243,10 @@ textarea::placeholder {
   height: 261px;
 }
 .news__header {
-  font-family: Arial, Calibri, sans-serif;
+  font-family: LatoBlack;
   text-transform: uppercase;
   text-align: center;
-  font-weight: bold;
+  letter-spacing: 1.3px;
   font-size: 18px;
   margin: 0;
 }
@@ -1241,10 +1315,10 @@ textarea::placeholder {
   margin-bottom: 54px;
 }
 .location__header {
-  font-family: Arial, Calibri, sans-serif;
+  font-family: LatoBlack;
   text-transform: uppercase;
   text-align: center;
-  font-weight: bold;
+  letter-spacing: 1.3px;
   font-size: 18px;
   margin: 0;
   margin-bottom: 30px;
@@ -1310,10 +1384,10 @@ textarea::placeholder {
   width: 288px;
 }
 .messaging__header {
-  font-family: Arial, Calibri, sans-serif;
+  font-family: LatoBlack;
   text-transform: uppercase;
   text-align: center;
-  font-weight: bold;
+  letter-spacing: 1.3px;
   font-size: 18px;
   margin: 0;
   margin-bottom: 22px;
@@ -1412,10 +1486,10 @@ textarea::placeholder {
   margin-top: 50px;
 }
 .video__header {
-  font-family: Arial, Calibri, sans-serif;
+  font-family: LatoBlack;
   text-transform: uppercase;
   text-align: center;
-  font-weight: bold;
+  letter-spacing: 1.3px;
   font-size: 18px;
   margin: 0;
   margin-bottom: 20px;
