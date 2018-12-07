@@ -69,7 +69,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(eot|woff|woff2|ttf)$/,
+                test: /\.(eot|woff|woff2|ttf|mp4)$/,
                 // exclude: /(node_modules|.git)/,
                 loader: 'file-loader',
                 options: {

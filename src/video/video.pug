@@ -1,11 +1,12 @@
 section.video
     h1.video__header Video
 
-    //.player
-        //video(width="594" height="336" autoplay="true")
-        //    source(src="https://vimeo.com/82845229" type="video/mp4")
-    //iframe( src="https://player.vimeo.com/video/82845229?autoplay=1&byline=0&portrait=0&badge=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+    .player
+        video(id="video" preload="metadata" poster=require("./poster.png"))
+            source(src=require("./video.mp4") type="video/mp4")
 
-    //video(id="my-player" poster="./poster.png" width="100%")
-        source( src="https://vimeo.com/video/82845229" type="video/mp4")
-    embed(src="https://player.vimeo.com/video/82845229")
+        #video-controls
+            button(id="playPause").play
+            .progress
+                .progress-fill
+            button(id="fs")
