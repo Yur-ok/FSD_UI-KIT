@@ -1,7 +1,9 @@
 var video = document.getElementById('video');
 var playPause = document.getElementById('playPause');
+var progress = document.querySelector('.progress');
 var progressBar = document.querySelector('.progress-fill');
 var fs = document.getElementById('fs');
+var player = document.querySelector('.player');
 
 //Play - Pause
 function handlePlay() {
@@ -28,17 +30,26 @@ video.addEventListener('timeupdate', function () {
     progressBar.style.width = (video.currentTime / video.duration) * 100 + '%';
 });
 
+function srcub(e) {
+    video.currentTime = (e.offsetX / progress.offsetWidth) * video.duration;
+}
+
+progress.addEventListener('click', srcub);
+
 // FullScreen
 var isFullScreen = function () {
-    return !!(document.fullScreen || document.webkitIsFullScreen || document.mozFullScreen || document.msFullscreenElement || document.fullscreenElement);
+    return !!(document.fullscreenElement);
 };
+console.log(isFullScreen());
 
 var handleFullscreen = function () {
     if (isFullScreen()) {
         if (document.exitFullscreen) document.exitFullscreen();
+        else if (document.webkitCancelFullScreen) document.webkitCancelFullScreen();
     }
     else {
-        if (video.requestFullscreen) video.requestFullscreen();
+        if (player.requestFullscreen) player.requestFullscreen();
+        else if (player.webkitRequestFullScreen) player.webkitRequestFullScreen();
     }
 };
 
