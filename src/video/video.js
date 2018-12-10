@@ -4,6 +4,7 @@ var progress = document.querySelector('.progress');
 var progressBar = document.querySelector('.progress-fill');
 var fs = document.getElementById('fs');
 var player = document.querySelector('.player');
+var videoDesc = document.querySelector('.description');
 
 //Play - Pause
 function handlePlay() {
