@@ -1,2 +1,10 @@
-section.calendar
-    //img(src=require("./Calendar.png"))
+h1.calendar__header Calendar
+
+.calendar-wrapper
+    .current-day
+        .date 24
+    .auto-jsCalendar.classic-theme(
+        data-day-format="DDD"
+        data-fdotw="2"
+    )
+    .today Today

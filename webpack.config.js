@@ -69,8 +69,8 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(eot|woff|woff2|ttf|mp4)$/,
-                // exclude: /(node_modules|.git)/,
+                test: /\.(eot|woff|woff2|ttf)$/,
+                exclude: /(node_modules|.git)/,
                 loader: 'file-loader',
                 options: {
                     name: "./fonts/[name].[ext]",
@@ -82,6 +82,14 @@ module.exports = {
                 loader: 'file-loader',
                 options: {
                     name: "./img/[name].[ext]",
+                }
+            },
+            {
+                test: /\.mp4$/,
+                exclude: /(node_modules|.git)/,
+                loader: 'file-loader',
+                options: {
+                    name: "./video/[name].[ext]",
                 }
             }
         ]

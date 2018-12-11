@@ -6,8 +6,10 @@ import 'bootstrap-slider/dist/css/bootstrap-slider.css';
 import './src/vendors/ON-OFF-Toggle-Switches-Switcher/css/switcher.css';
 import './src/vendors/selectize.js-master/dist/js/standalone/selectize';
 import './src/vendors/selectize.js-master/dist/css/selectize.css';
-// import './src/vendors/video.js-master/build/docs/styles/videojs.css';
-
+import 'simple-jscalendar/source/jsCalendar';
+import 'simple-jscalendar/source/jsCalendar.css';
+import 'simple-jscalendar/source/jsCalendar.lang.uk';
+import 'simple-jscalendar/themes/jsCalendar.clean.css';
 //ripple effect for buttons
 import { defaultOptions } from 'ripplet.js/es/ripplet-declarative';
 defaultOptions.color = 'rgba(230, 220, 255, .3)';
