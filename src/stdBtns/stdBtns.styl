@@ -14,25 +14,28 @@ hovered_o()
 .stdBtns
     &__header
         CommonFonts()
+        margin-bottom: 72px
 
-.buttons
-    margin-top: 72px
+.button-rows
     display: flex
     flex-direction: column
     align-items: center
+    justify-content: space-between
+    height: 140px
+    outline: 1px solid red
 
 .pressed
 .hovered
 .inactive
-    //margin: 0 auto
-    width: 78%
+    width: 66%
     display: flex
-    justify-content: space-evenly
+    justify-content: space-between
+    align-items: flex-end
+    outline: 1px solid green
 
 .button
+    flex-shrink: 0
     vertical-align: bottom
-    margin-right: 20px
-    margin-top: 20px
     border-top: 1px
     border-left: 1px
     border-right: 1px
@@ -41,12 +44,9 @@ hovered_o()
     border-radius 3px
     text-transform: uppercase
     background-color: $white
-    button: nth-child(4)
     outline: none
     &:not(.button__hovered):active
         border-bottom-width: 1px
-    &:last-child
-        margin-right: unset
 
 .pressed button
     margin-top: 0
@@ -107,3 +107,34 @@ hovered_o()
     position: absolute
     top: -10px
     right: -18px
+
+@media screen and (max-width: 600px)
+
+    .button-rows
+        //flex-direction: row
+        //align-items: stretch
+        height: 250px
+
+    .pressed
+    .hovered
+    .inactive
+        align-items: center
+        flex-wrap wrap
+        justify-content: space-between
+
+    .button-rows > div button:nth-last-child(1)
+        order: 2
+
+    .button-rows > div button:nth-last-child(2)
+        order: 4
+
+    .button-rows > div button:nth-last-child(3)
+        order: 3
+
+    .button-rows > div button:nth-last-child(4)
+        order: 1
+
+@media screen and (max-width: 320px)
+
+    .button-rows
+        height: 350px
