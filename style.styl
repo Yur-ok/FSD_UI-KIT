@@ -4,13 +4,13 @@
     font-family: LatoBlack
     src: url("./src/fonts/Lato-Black.ttf")
     src: local('Lato-Black'), local('LatoBlack'),
-        url("./src/fonts/Lato-Black.ttf") format('truetype')
+            url("./src/fonts/Lato-Black.ttf") format('truetype')
 @font-face
     font-family: LatoBold
     src: local('Lato-Bold') url("./src/fonts/Lato-Bold.ttf") format('truetype')
 @font-face
     font-family: LatoLight
-    src: local('Lato-Light') url("./src/fonts/Lato-Light.ttf") format('truetype')
+    src: local('Lato-light') url("./src/fonts/Lato-Light.ttf") format('truetype')
 @font-face
     font-family: LatoRegular
     src: local('Lato-Regular') url("./src/fonts/Lato-Regular.ttf") format('truetype')
@@ -21,20 +21,18 @@
 @font-face
     font-family: sspRegular
     src: local('SourceSansPro-Regular') url("./src/fonts/SourceSansPro-Regular.ttf") format('truetype')
-
 body
-    display: flex
-    justify-content: center
     margin: 0
     padding: 0
 
 main
+    margin: 0 auto
     width: 700px
     display: flex
     flex-direction: column
-    justify-content: center
     padding-top: 82px
     padding-bottom: 110px
+    background-color: yellow
 
 @import "./src/stdBtns/stdBtns.styl"
 //@import "./src/arrowBtns/arrowBtns.styl"
@@ -68,3 +66,7 @@ main
 //@import "./src/calendar/calendar.styl"
 //@import "./src/messaging/messaging.styl"
 //@import "./src/video/video.styl"
+
+@media screen and (max-width: 700px)
+    main
+        width: 100%
