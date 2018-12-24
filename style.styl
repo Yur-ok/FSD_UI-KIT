@@ -21,20 +21,18 @@
 @font-face
     font-family: sspRegular
     src: local('SourceSansPro-Regular') url("./src/fonts/SourceSansPro-Regular.ttf") format('truetype')
-
 body
-    display: flex
-    justify-content: center
     margin: 0
     padding: 0
 
 main
+    margin: 0 auto
     width: 700px
     display: flex
     flex-direction: column
-    justify-content: center
     padding-top: 82px
     padding-bottom: 110px
+    background-color: yellow
 
 @import "./src/stdBtns/stdBtns.styl"
 //@import "./src/arrowBtns/arrowBtns.styl"
@@ -68,3 +66,7 @@ main
 //@import "./src/calendar/calendar.styl"
 //@import "./src/messaging/messaging.styl"
 //@import "./src/video/video.styl"
+
+@media screen and (max-width: 700px)
+    main
+        width: 100%
