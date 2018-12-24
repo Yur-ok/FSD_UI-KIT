@@ -1,3 +1,5 @@
+@import "../variablesStyl/variables.styl"
+
 //mixins
 hovered_g()
     color: $white
@@ -9,9 +11,6 @@ hovered_o()
     background-color: $orange
     border-color: $darkOrange
 
-*
-    box-sizing: border-box
-
 .stdBtns
     &__header
         CommonFonts()
@@ -20,19 +19,19 @@ hovered_o()
 .button-rows
     display: flex
     flex-direction: column
-    justify-content: space-between
     align-items: center
+    justify-content: space-between
     height: 140px
+    outline: 1px solid red
 
 .pressed
 .hovered
 .inactive
+    width: 66%
     display: flex
     justify-content: space-between
     align-items: flex-end
-    margin: 0 auto
-    width: 66%
-
+    outline: 1px solid green
 
 .button
     flex-shrink: 0
@@ -110,15 +109,18 @@ hovered_o()
     right: -18px
 
 @media screen and (max-width: 600px)
+
     .button-rows
-        height: 260px
+        //flex-direction: row
+        //align-items: stretch
+        height: 250px
 
     .pressed
     .hovered
     .inactive
-        width: 45%
-        height: 90px
+        align-items: center
         flex-wrap wrap
+        justify-content: space-between
 
     .button-rows > div button:nth-last-child(1)
         order: 2
@@ -132,8 +134,7 @@ hovered_o()
     .button-rows > div button:nth-last-child(4)
         order: 1
 
-@media screen and (max-width: 560px)
-    .pressed
-    .hovered
-    .inactive
-        width: 252px
+@media screen and (max-width: 320px)
+
+    .button-rows
+        height: 350px
