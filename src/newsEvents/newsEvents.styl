@@ -1,0 +1,71 @@
+.news
+    margin-top: 95px
+    width: 100%
+    height: 261px
+    display: flex
+    flex-direction: inherit
+    &__header
+        CommonFonts()
+        margin-bottom: 33px
+
+.news-and-events
+    display: flex
+    justify-content: space-between
+    align-self: center
+    width: 85%
+
+    & .article, .event
+        display: flex
+        width: 288px
+        height: 212px
+        flex-shrink: 0
+
+    & .article-right
+        background-color: $orange
+        color: $white
+        padding: 20px 24px
+
+        & h2
+            font-size: 26px
+            margin: 0 0 7px 0
+
+        & h3
+            font-size: 11px
+            margin: 0 0 14px 0
+        & p
+            font-size: 12px
+            margin: 0
+
+.event-right
+    background-color: $green
+    color: $white
+    padding: 9px 21px
+
+    & h2
+        font-size: 30px
+        margin: 0 0 5px 0
+        & span
+            font-size: 73px
+    & h3
+        font-size: 12.5px
+        text-transform: uppercase
+        margin: 0 0 5px 0
+    & p
+        font-size: 12px
+        margin: 0
+
+#forCalendar
+    margin: 18px 0 0 10px
+    width: 128px
+    height: 26px
+    font-size: 10px
+    font-weight: bold
+    border-color: #379285
+
+@media screen and (max-width: 690px)
+    .news-and-events
+        flex-direction: column
+        align-items: center
+
+    .event
+        margin-top: 20px
