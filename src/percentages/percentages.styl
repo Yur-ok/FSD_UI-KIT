@@ -1,15 +1,17 @@
-@import "../variablesStyl/variables.styl"
-
 .percentages
     margin-top: 47px
+    display: flex
+    flex-direction: inherit
     &__header
         CommonFonts()
         margin-bottom: 16px
-        letter-spacing: 0.2px
 
 .pie-container
     display: flex
-    justify-content: space-evenly
+    justify-content: space-between
+    flex-wrap wrap
+    width: 83%
+    align-self: center
 
 .pie
     &:nth-child(1)
@@ -41,5 +43,5 @@
         margin: 0
 
 .jchart__summary
-    font-family: Tahoma, Calibri, sans-serif;
+    font-family: LatoLight
     alignment-baseline central
