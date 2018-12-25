@@ -1,0 +1,78 @@
+.searchDD
+    display: flex
+    flex-wrap nowrap
+    flex-direction: column
+    &__header
+        CommonFonts()
+        letter-spacing: 0.6px
+        margin-bottom: 20px
+    &__fields
+        margin-left: 2px
+        margin-bottom: 16px
+        display: flex
+        width: 288px
+        height: 28px
+        & input[type=search]
+            width: 255px
+            //padding: 4px
+            border: 1px solid transparent
+            border-radius: 3px 0 0 3px
+            background-color: $gray
+            outline: none
+            &::placeholder
+                color: #888888
+                font-size: 14px
+            &.fill
+                background-color: $orange
+                &::placeholder
+                    color: $white
+        & .searchDD-button
+            width: 33px
+            height: 28px
+            border-radius: 0 3px 3px 0
+            background-color: $orange
+            background-image: url(MagGlass.png)
+            background-repeat: no-repeat
+            background-position: 10px 7px
+
+//drop down
+.select-fields
+    margin-top: 2px
+    margin-left: 2px
+    width: 288px
+    height: 28px
+    position: relative
+
+.select-fields label
+    position: absolute
+    width: 33px
+    height: 28px
+    background-color: $green
+    top: 0
+    left: 255px
+    z-index: 100
+    border-radius: 0 3px 3px 0
+    cursor: pointer
+    &:after
+        content: ' '
+        display: block
+        position: absolute
+        left: 12px
+        top: 7px
+        width: 7px
+        height: 7px
+        border: solid $white
+        border-width: 0 3px 3px 0
+        transform: rotate(45deg)
+
+.select-fields .dropdown-active:after
+    content: ' '
+    display: block
+    position: absolute
+    left: 12px
+    top: 7px
+    width: 7px
+    height: 7px
+    border: solid $white
+    border-width: 0 3px 3px 0
+    transform: rotate(225deg)

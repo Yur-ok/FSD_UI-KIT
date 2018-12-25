@@ -38,18 +38,20 @@ main
 @import "./src/sliders/sliders.styl"
 @import "./src/stages/stages.styl"
 @import "./src/formElements/formElements.styl"
+@import "./src/searchDropDown/searchDropDown.styl"
+@import "./src/userProfile/userProfile.styl"
 
-//@import "./src/searchDropDown/searchDropDown.styl"
-//@import "./src/userProfile/userProfile.styl"
+.search-and-userProfile
+    margin-top: 65px
+    display: flex
+    justify-content: center
+    align-self: center
+    width: 85%
+    & .userPfofile
+        width: 100%
+        display: flex
+        flex-direction: column
 
-//.search-and-userProfile
-//    margin-top: 65px
-//    display: flex
-//    & .userPfofile
-//        width: 100%
-//        margin-left: 16px
-//        display: flex
-//        flex-direction: column
 //@import "./src/newsEvents/newsEvents.styl"
 //@import "./src/location/location.styl"
 
@@ -69,3 +71,12 @@ main
 @media screen and (max-width: 700px)
     main
         width: 100%
+
+@media screen and (max-width: 670px)
+    .search-and-userProfile
+        flex-direction: column
+        & .search
+            align-self: center
+        & .userPfofile
+            margin-top: 40px
+            align-items: center
