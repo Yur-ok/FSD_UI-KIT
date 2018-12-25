@@ -1,0 +1,95 @@
+@import "tickBoxes/tickBoxes.styl"
+@import "toggles/toggles.styl"
+
+.elements
+    margin-top: 30px
+    display: flex
+    flex-direction: inherit
+    &__header
+        CommonFonts()
+    &-wrapper
+        margin-top: 49px
+        margin-left: 53px
+        display: flex
+        width: 75.5%
+        justify-content: space-between
+
+.formFields
+    position: relative
+    display: flex
+    flex-direction: column
+    width: 288px
+    &__name
+    &__email
+        width: 208px
+        height: 26px
+        margin-bottom: 15px
+        font-size: 14px
+        background-color: $gray
+        border: unset
+        border-radius: 3px
+    &__message
+        height: 82px
+        margin-bottom: 15px
+        font-size: 14px
+        background-color: $gray
+        border-color: $gray
+        border-radius: 3px
+        resize: none
+        font-family: Arial
+    &__submit
+        padding: 7px 35px 11px 30px
+        height: 36px
+        width: 117px
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 12px
+        align-self: flex-end
+        border-bottom: 3px solid $darkGreen
+        border-top: 0
+        border-left: 0
+        border-right: 0
+        border-radius: 3px
+        background-color: $green
+        color: $white
+
+input::placeholder
+    padding-left: 12px
+
+textarea::placeholder
+    padding: 7px 0 0 10px
+
+.tooltip
+    position: absolute
+    height: 28px
+    width: 72px
+    border-radius: 5px
+    font-weight: bold
+    text-transform: uppercase
+    font-size: 10px
+
+    &.error
+        background-color: $orange
+        left: 75%
+    &.thanks
+        background-color: $green
+        left: 75%
+        top: 19%
+
+.tooltiptext
+    text-align: center
+    vertical-align: middle
+    line-height: 28px
+    color: $white
+    &::after
+        content: " "
+        position: absolute
+        top: 50%
+        right: 100% /* To the left of the tooltip */
+        margin-top: -3px
+        border-width: 3px
+        border-style: solid
+        .tooltip.error &
+            border-color: transparent $orange transparent transparent
+        .tooltip.thanks &
+            border-color: transparent $green transparent transparent

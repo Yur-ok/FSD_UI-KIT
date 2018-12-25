@@ -1,0 +1,64 @@
+///*! =======================================================
+//                      VERSION  10.2.3
+//========================================================= */
+///*! =========================================================
+// * bootstrap-slider.js
+// *
+// * Maintainers:
+// *		Kyle Kemp
+// *			- Twitter: @seiyria
+// *			- Github:  seiyria
+// *		Rohit Kalkur
+// *			- Twitter: @Rovolutionary
+// *			- Github:  rovolution
+// *
+// * =========================================================
+
+.stages
+    margin-top: 30px
+    position: relative
+    &__header
+        CommonFonts()
+        margin-bottom: 14px
+
+.stage
+    display: flex
+    & .slider-horizontal#st
+        width: 95%
+        margin: 17px auto
+
+#st .slider-track
+    height: 5px
+
+#st .slider-selection
+#st .slider-tick.in-selection
+    background: $orange
+
+#st .slider-tick-label-container
+    font-weight: bold
+    font-size: 17px
+    position: absolute
+    z-index: 99
+    margin-top: -6px
+    color: $deepGray
+
+#st .slider-handle
+    background: transparent
+    width: 28px
+    height: 28px
+    top: -6px
+
+#st .slider-tick
+    background: $gray
+    box-shadow unset
+    width: 28px
+    height: 28px
+    opacity: unset
+    margin-left: -14px
+    top: -6px
+
+#st .slider-tick-label
+    height: 25px
+
+#st .whiteNum
+    color: $white
