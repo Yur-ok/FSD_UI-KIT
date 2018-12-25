@@ -2,17 +2,21 @@
 @import "toggles/toggles.styl"
 
 .elements
-    margin-top: 27px
+    margin-top: 30px
+    display: flex
+    flex-direction: inherit
     &__header
         CommonFonts()
     &-wrapper
         margin-top: 49px
+        margin-left: 53px
         display: flex
+        width: 75.5%
+        justify-content: space-between
     &-wrapper__col1
-        //background: greenyellow
+        background: greenyellow
     &-wrapper__col2
-        //background-color: gold
-        margin-left: 98px
+        background-color: gold
 
 .formFields
     position: relative
@@ -23,14 +27,14 @@
     &__email
         width: 208px
         height: 26px
-        margin-bottom: 12px
+        margin-bottom: 15px
         font-size: 14px
         background-color: $gray
         border: unset
         border-radius: 3px
     &__message
         height: 82px
-        margin-bottom: 10px
+        margin-bottom: 15px
         font-size: 14px
         background-color: $gray
         border-color: $gray
@@ -60,7 +64,6 @@ textarea::placeholder
     padding: 7px 0 0 10px
 
 .tooltip
-    //visibility: hidden
     position: absolute
     height: 28px
     width: 72px
