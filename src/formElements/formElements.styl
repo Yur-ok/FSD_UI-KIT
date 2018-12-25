@@ -93,3 +93,38 @@ textarea::placeholder
             border-color: transparent $orange transparent transparent
         .tooltip.thanks &
             border-color: transparent $green transparent transparent
+
+@media screen and (max-width: 600px)
+    .elements-wrapper
+        flex-direction: column
+        &__col1
+            align-self: center
+        &__col2
+            align-self: center
+            justify-content: space-between
+            margin-top: 40px
+            display: flex
+            flex-direction: row
+            width: 64%
+
+    .elements__toggles
+        display: flex
+        flex-direction: column
+        flex-wrap nowrap
+
+    .toggleses
+        align-self: center
+        flex-wrap nowrap
+
+    .elements__tickBoxes
+        margin-top: 0
+
+@media screen and (max-width: 527px)
+    .elements-wrapper
+        &__col2
+            flex-direction: column
+
+    .elements__tickBoxes
+        margin-top: 40px
+        width: 60%
+        align-self: center

@@ -5,10 +5,10 @@
     CommonFonts()
     h1&
         margin: 0
+        margin-bottom: 29px
 
 .container-wrapper
     display: flex
-    margin-top: 29px
     & .left
         margin-left: 31px
         margin-right: 20px
@@ -52,8 +52,6 @@
     content: ""
     position: absolute
 
-//display: none
-
 /* Show the checkmark  */
 .container input:checked ~ .checkmark:after
     display: block
@@ -72,3 +70,10 @@
     width: 3px
     height: 8px
     transform: rotate(45deg)
+
+@media screen and (max-width: 600px)
+    .container-wrapper
+        justify-content: space-evenly
+        & .left
+            margin-left: 0
+            margin-right: 0
