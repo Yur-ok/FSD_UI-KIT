@@ -1,0 +1,47 @@
+.percentages
+    margin-top: 47px
+    display: flex
+    flex-direction: inherit
+    &__header
+        CommonFonts()
+        margin-bottom: 16px
+
+.pie-container
+    display: flex
+    justify-content: space-between
+    flex-wrap wrap
+    width: 83%
+    align-self: center
+
+.pie
+    &:nth-child(1)
+        & .jchart__donut
+            margin-left: -20px
+
+    ^[0]:nth-child(2)
+        & .jchart__donut
+            margin-left: -28px
+
+    ^[0]:nth-child(3)
+        & .jchart__donut
+            margin-left: -13px
+
+    ^[0]:nth-child(4)
+        & .jchart__donut
+            margin-left: -1px
+
+    ^[0]:last-child
+        & .jchart__donut
+            margin-left: 6px
+
+.pie
+    width: 110px
+
+.jchart
+    width: 100%
+    &__figure
+        margin: 0
+
+.jchart__summary
+    font-family: LatoLight
+    alignment-baseline central
