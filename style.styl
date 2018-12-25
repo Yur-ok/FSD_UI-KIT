@@ -1,23 +1,71 @@
+@import "./src/variablesStyl/variables.styl"
+//Lato-*
+@font-face
+    font-family: LatoBlack
+    src: local('Lato-Black') url("./src/fonts/Lato-Black.ttf") format('truetype')
+@font-face
+    font-family: LatoBold
+    src: local('Lato-Bold') url("./src/fonts/Lato-Bold.ttf") format('truetype')
+@font-face
+    font-family: LatoLight
+    src: local('Lato-Light') url("./src/fonts/Lato-Light.ttf") format('truetype')
+@font-face
+    font-family: LatoRegular
+    src: local('Lato-Regular') url("./src/fonts/Lato-Regular.ttf") format('truetype')
+//SourceSansPro-*
+@font-face
+    font-family: sspLight
+    src: local('SourceSansPro-Light') url("./src/fonts/SourceSansPro-Light.ttf") format('truetype')
+@font-face
+    font-family: sspRegular
+    src: local('SourceSansPro-Regular') url("./src/fonts/SourceSansPro-Regular.ttf") format('truetype')
 body
-    display: flex
-    justify-content: space-around
     margin: 0
     padding: 0
 
 main
-    margin 0 auto
-    width: 597px
-    padding-left: 53px
-    padding-right: 53px
+    margin: 0 auto
+    width: 700px
+    display: flex
+    flex-direction: column
+    padding-top: 82px
+    padding-bottom: 110px
+    background-color: yellow
 
 @import "./src/stdBtns/stdBtns.styl"
 @import "./src/arrowBtns/arrowBtns.styl"
 @import "./src/percentages/percentages.styl"
-@import "./src/sliders/sliders.styl"
-@import "./src/stages/stages.styl"
-@import "./src/formElements/formElements.styl"
-@import "./src/searchDropDown/searchDropDown.styl"
 
-.search-and-userProfile
-    margin-top: 51px
-    display: flex
+//@import "./src/sliders/sliders.styl"
+//@import "./src/stages/stages.styl"
+//@import "./src/formElements/formElements.styl"
+//@import "./src/searchDropDown/searchDropDown.styl"
+//@import "./src/userProfile/userProfile.styl"
+
+//.search-and-userProfile
+//    margin-top: 65px
+//    display: flex
+//    & .userPfofile
+//        width: 100%
+//        margin-left: 16px
+//        display: flex
+//        flex-direction: column
+//@import "./src/newsEvents/newsEvents.styl"
+//@import "./src/location/location.styl"
+
+//.calendar-and-messaging
+//    display: flex
+//    justify-content: space-between
+//    margin-top: 57px
+//    & .calendar
+//        width: 280px
+//    & .messaging
+//        width: 288px
+
+//@import "./src/calendar/calendar.styl"
+//@import "./src/messaging/messaging.styl"
+//@import "./src/video/video.styl"
+
+@media screen and (max-width: 700px)
+    main
+        width: 100%
