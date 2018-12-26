@@ -1,13 +1,18 @@
 .video
-    margin-top: 50px
+    display: flex
+    flex-direction inherit
+    margin-top: 53px
     &__header
         CommonFonts()
         margin-bottom: 22px
     & .player
-        width: 598px
-        height: 334px
+        display: flex
+        align-self: center
+        width: 85%
+        height: 337px
         position: relative
         overflow: hidden
+        border-radius: 5px
     &:hover #video-controls
         transform: translateY(0)
         transition .3s ease
@@ -44,12 +49,12 @@ video
         font-family: LatoRegular
         display: block
         font-size: 17px
-        margin: 20px 0 0 40px
+        margin: 25px 0 0 40px
         text-decoration: none
 
 #video-controls
     width: 100%
-    height: 46px
+    height: 48px
     position: absolute
     bottom: 0
     display: flex
@@ -63,7 +68,7 @@ video
         background-size: contain
         background-repeat: no-repeat
     & .play
-        width: 8%
+        width: 9%
         height: auto
         background-image: url("play.png")
         background-repeat: no-repeat
@@ -77,7 +82,7 @@ video
         background-position: center
         background-size: 22px 22px
     & .progress
-        width: 80%
+        width: 79%
         height: 5px
         border-radius: 20px
         border: none
@@ -98,3 +103,41 @@ video
         background-position: center
         background-size: 22px 22px
         margin-left: auto
+
+@media screen and (max-width: 426px)
+    .video .player
+        height: 206px
+
+    #video-controls
+        & .play
+            width: 20%
+        & .progress
+            width: 60%
+        & #fs
+            width: 20%
+
+    .description
+        & h2
+            font-size: 25px
+            margin: 0 0 0 20px
+        & h3
+            font-size: 10px
+            margin: 15px 0 0 20px
+        & a
+            font-size: 15px
+            margin: 15px 0 0 20px
+
+@media screen and (max-width: 320px)
+    .video .player
+        height: 156px
+
+    .description
+        & h2
+            font-size: 18px
+            margin: 0 0 0 20px
+        & h3
+            font-size: 10px
+            margin: 15px 0 0 20px
+        & a
+            font-size: 15px
+            margin: 15px 0 0 20px
