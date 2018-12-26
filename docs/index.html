@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UI-KIT</title>
+  <link href="style.22f18b1264f1bacfc0e0.css?22f18b1264f1bacfc0e0" rel="stylesheet"></head>
+  <body>
+    <main>
+<section class="stdBtns">
+  <h1 class="stdBtns__header">Standard buttons</h1>
+  <div class="button-rows">
+    <div class="pressed">
+      <button class="button button__small button-color__green button__pressed">button<img src="./img/rippleEffect.png"></button>
+      <button class="button button__big button-color__green button__pressed">button<img src="./img/rippleEffect.png"></button>
+      <button class="button button__big button-color__orange button__pressed">button<img src="./img/rippleEffect.png"></button>
+      <button class="button button__small button-color__orange button__pressed">button<img src="./img/rippleEffect.png"></button>
+    </div>
+    <div class="hovered">
+      <button class="button button__small button-color__green button__hovered">button</button>
+      <button class="button button__big button-color__green button__hovered">button</button>
+      <button class="button button__big button-color__orange button__hovered">button</button>
+      <button class="button button__small button-color__orange button__hovered">button</button>
+    </div>
+    <div class="inactive">
+      <button class="button button__small button-color__green" data-ripplet>button</button>
+      <button class="button button__big button-color__green" data-ripplet>button</button>
+      <button class="button button__big button-color__orange" data-ripplet>button</button>
+      <button class="button button__small button-color__orange" data-ripplet>button</button>
+    </div>
+  </div>
+</section>
+      <!-- @direction - in which way will arrow show-->
+      <!-- @condition - hovered, inactive, disabled-->
+      <section class="arrowBtns main__arrowBtn">
+        <h1 class="arrowBtns__header">Arrow buttons</h1>
+        <div class="arrows-wrapper">
+          <div class="arrow-inactive">
+                  <button class="buttonArr buttonArr-direction__left buttonArr-condition__inactive">
+                    <svg class="leftArrow" id="left" width="15px" height="25px">
+                      <path d="M14.663,21.531 L12.031,24.163 L0.185,12.318 L0.232,12.271 L0.185,12.224 L12.031,0.379 L14.663,3.011 L5.403,12.271 L14.663,21.531 Z"></path>
+                    </svg>
+                  </button>
+                  <button class="buttonArr buttonArr-direction__right buttonArr-condition__inactive">
+                    <svg class="rightArrow" id="right" width="15px" height="25px">
+                      <path d="M14.815,12.318 L2.969,24.163 L0.337,21.531 L9.597,12.271 L0.337,3.011 L2.969,0.379 L14.815,12.224 L14.768,12.271 L14.815,12.318 Z"></path>
+                    </svg>
+                  </button>
+          </div>
+          <div class="arrow-disabled">
+                  <button class="buttonArr buttonArr-direction__left buttonArr-condition__disabled">
+                    <svg class="leftArrow" id="left" width="15px" height="25px">
+                      <path d="M14.663,21.531 L12.031,24.163 L0.185,12.318 L0.232,12.271 L0.185,12.224 L12.031,0.379 L14.663,3.011 L5.403,12.271 L14.663,21.531 Z"></path>
+                    </svg>
+                  </button>
+                  <button class="buttonArr buttonArr-direction__right buttonArr-condition__disabled">
+                    <svg class="rightArrow" id="right" width="15px" height="25px">
+                      <path d="M14.815,12.318 L2.969,24.163 L0.337,21.531 L9.597,12.271 L0.337,3.011 L2.969,0.379 L14.815,12.224 L14.768,12.271 L14.815,12.318 Z"></path>
+                    </svg>
+                  </button>
+          </div>
+          <div class="arrow-hovered">
+                  <button class="buttonArr buttonArr-direction__left buttonArr-condition__hovered">
+                    <svg class="leftArrow" id="left" width="15px" height="25px">
+                      <path d="M14.663,21.531 L12.031,24.163 L0.185,12.318 L0.232,12.271 L0.185,12.224 L12.031,0.379 L14.663,3.011 L5.403,12.271 L14.663,21.531 Z"></path>
+                    </svg>
+                  </button>
+                  <button class="buttonArr buttonArr-direction__right buttonArr-condition__hovered">
+                    <svg class="rightArrow" id="right" width="15px" height="25px">
+                      <path d="M14.815,12.318 L2.969,24.163 L0.337,21.531 L9.597,12.271 L0.337,3.011 L2.969,0.379 L14.815,12.224 L14.768,12.271 L14.815,12.318 Z"></path>
+                    </svg>
+                  </button>
+          </div>
+        </div>
+      </section>
+<section class="percentages">
+  <h1 class="percentages__header">Percentages / Pie chart</h1>
+  <div class="pie-container">
+    <div class="pie" id="pie_1"></div>
+    <div class="pie" id="pie_2"></div>
+    <div class="pie" id="pie_3"></div>
+    <div class="pie" id="pie_4"></div>
+    <div class="pie" id="pie_5"></div>
+  </div>
+</section>
+<section class="sliders">
+  <h1 class="sliders__header">Sliders</h1>
+  <div class="sliders-container">
+    <div class="sliderDiv__left">
+      <input class="slider-left color-2" id="leftSl" type="text" data-type="single" data-min="0" data-max="117" data-value="40" data-step="1" data-from="40" data-hide-min-max="true">
+    </div>
+    <div class="sliderDiv__right">
+      <input class="slider-right color-3" id="rightSl" type="text" data-type="single" data-min="0" data-max="100" data-step="25" data-value="75" data-from="75" data-grid="true" data-grid-margin="true" data-hide-from-to="true" data-hide-min-max="true">
+    </div>
+  </div>
+</section>
+<section class="stages">
+  <h1 class="stages__header">Stages</h1>
+  <div class="stage">
+    <input id="stage" type="text" data-provide="slider" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3" data-slider-ticks="[1,2,3,4,5]" data-slider-ticks-labels="[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;]" data-slider-tooltip="hide" data-slider-id="st">
+  </div>
+</section>
+<section class="elements">
+  <h1 class="elements__header">Form elements</h1>
+  <div class="elements-wrapper">
+    <div class="elements-wrapper__col1">
+      <form class="formFields">
+        <input class="formFields__name" type="text" placeholder="Your Name">
+        <div class="tooltip error">
+          <div class="tooltiptext">error</div>
+        </div>
+        <input class="formFields__email" type="email" placeholder="Your Email">
+        <div class="tooltip thanks">
+          <div class="tooltiptext">thanks!</div>
+        </div>
+        <textarea class="formFields__message" name="message" placeholder="Your Message"></textarea>
+        <input class="formFields__submit" type="submit" value="submit">
+      </form>
+    </div>
+    <div class="elements-wrapper__col2">
+<div class="elements__toggles">
+  <h1 class="toggles-header">Toggles</h1>
+  <div class="toggleses">
+    <input class="form-check-input left" type="checkbox" id="inlineCheckbox1" value="option1">
+    <input class="form-check-input right" type="checkbox" id="inlineCheckbox2" value="option2" checked="checked">
+  </div>
+</div>
+<div class="elements__tickBoxes">
+  <h1 class="tickBoxes-header">Tick Boxes</h1>
+  <div class="container-wrapper">
+    <label>
+      <div class="container left">
+        <input type="checkbox" checked="checked"><span class="checkmark"></span>
+      </div>
+    </label>
+    <label>
+      <div class="container right">
+        <input type="checkbox"><span class="checkmark"></span>
+      </div>
+    </label>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+      <div class="search-and-userProfile">
+        <div class="search">
+<section class="searchDD">
+  <h1 class="searchDD__header">Search / drop down</h1>
+  <div class="searchDD__fields">
+    <input type="search" placeholder="Search" id="find">
+    <div class="searchDD-button"></div>
+  </div>
+  <div class="searchDD__fields">
+    <input class="fill" type="search" placeholder="I've not found what I'm looking for..." id="findNothing">
+    <div class="searchDD-button"></div>
+  </div>
+  <div class="select-fields">
+    <select id="options">
+      <option>Choose An Option</option>
+      <option>One</option>
+      <option>Two</option>
+      <option>Three</option>
+    </select>
+    <label for="options"></label>
+  </div>
+</section>
+        </div>
+        <div class="userPfofile">
+<h1 class="userProfile__header">User profile</h1>
+<svg style="display: none">
+  <symbol id="twit" viewBox="0 0 500 500">
+    <path d="M196.9,462c120.3,0,186.1-99.7,186.1-186.1c0-2.8,0-5.6-0.2-8.5c12.8-9.3,23.8-20.7,32.6-33.9  c-11.9,5.3-24.6,8.8-37.6,10.3c13.7-8.2,23.9-21,28.8-36.2c-12.8,7.6-26.9,13-41.5,15.9c-24.8-26.3-66.2-27.6-92.5-2.8  c-17,16-24.2,39.8-18.9,62.5c-52.6-2.6-101.6-27.5-134.8-68.3c-17.4,29.9-8.5,68.1,20.2,87.3c-10.4-0.3-20.6-3.1-29.7-8.2  c0,0.3,0,0.5,0,0.8c0,31.1,22,57.9,52.5,64.1c-9.6,2.6-19.7,3-29.5,1.1c8.6,26.6,33.1,44.9,61.1,45.4  c-23.2,18.2-51.8,28.1-81.2,28.1c-5.2,0-10.4-0.3-15.6-0.9C126.5,451.8,161.3,462,196.9,462"></path>
+  </symbol>
+  <symbol id="fb" viewBox="0 0 100 100">
+    <g>
+      <path d="M38.078,22.431v12.391H29v15.152h9.078V95h18.648V49.975H69.24c0,0,1.172-7.265,1.74-15.209   H56.797v-10.36c0-1.548,2.033-3.631,4.043-3.631H71V5.001H57.186C37.617,5,38.078,20.167,38.078,22.431"></path>
+    </g>
+  </symbol>
+  <symbol>(id="drbl" viewBox="0 0 100 100")
+    <g>
+      <path>(class="fil1" d="M5213 2375c-1567,0 -2838,1271 -2838,2838 0,1568 1271,2839 2838,2839 1568,0 2839,-1271 2839,-2839 0,-1567 -1271,-2838 -2839,-2838zm0 493l0 0c538,0 1033,185 1430,491 -285,367 -679,658 -1180,870 -240,-440 -515,-869 -825,-1286 184,-47 377,-75 575,-75zm-1058 255l0 0c315,413 594,838 837,1273 -575,170 -1261,256 -2054,262 164,-671 615,-1228 1217,-1535zm-1287 2090l0 0c0,-20 3,-40 4,-60 910,-2 1695,-106 2353,-313 55,112 108,225 158,339 -799,249 -1458,762 -1971,1532 -339,-406 -544,-928 -544,-1498zm2345 2345l0 0c-542,0 -1041,-187 -1439,-497 466,-731 1061,-1206 1797,-1426 220,572 381,1161 484,1764 -262,102 -545,159 -842,159zm1302 -396l0 0c-104,-556 -256,-1100 -454,-1631 443,-63 932,-47 1466,46 -104,659 -480,1229 -1012,1585zm-644 -2098l0 0c-57,-133 -117,-266 -181,-398 546,-236 985,-558 1312,-965 319,377 520,856 549,1380 -609,-100 -1169,-105 -1680,-17z")</path>
+    </g>
+  </symbol>
+</svg>
+<div class="boy">
+  <div class="photo"><img src="./img/boy.png"></div>
+  <div class="info">
+    <h2 class="name">John Smith</h2>
+    <h3 class="position">ux designer</h3>
+    <div class="social-btns">
+      <svg class="fb" width="50" height="50">
+        <use xlink:href="#fb"></use>
+      </svg>
+      <svg class="twit" width="50" height="50">
+        <use xlink:href="#twit"></use>
+      </svg>
+      <svg class="drbl" width="50" height="50">
+        <use xlink:href="#drbl"></use>
+      </svg>
+      <!--img(src=require("./i_Twitter.svg")).twit-->
+      <!--img(src=require("./i_dribble_.svg")).drbl-->
+    </div>
+  </div>
+</div>
+<div class="girl">
+  <div class="photo"><img src="./img/girl.png"></div>
+  <div class="info">
+    <h2 class="name">Sarah Brown</h2>
+    <h3 class="position">Developer</h3>
+    <div class="social-btns"><img class="fb" src="./img/i_facebook.svg"><img class="twit" src="./img/i_Twitter.svg"><img class="drbl" src="./img/i_dribble_.svg"></div>
+  </div>
+</div>
+        </div>
+      </div>
+<section class="news">
+  <h1 class="news__header">News & Events</h1>
+  <div class="news-and-events">
+    <div class="article">
+      <div class="article-left"><img src="./img/bicycle.png"></div>
+      <div class="article-right">
+        <h2>It's all going downhill</h2>
+        <h3>24 August 2013</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.
+          
+        </p>
+      </div>
+    </div>
+    <div class="event">
+      <div class="event-left"><img src="./img/houses.png"></div>
+      <div class="event-right">
+        <h2><span>24</span> Aug</h2>
+        <h3>This is the title</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <button class="button button-color__green" id="forCalendar">Add to calendar</button>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="location">
+  <h1 class="location__header">Location</h1>
+  <div class="location__wrapper">
+    <div class="googleMap" id="map"></div>
+    <div class="customMapControl">
+      <div class="customMapControl__text">
+        <h2>Meet us!</h2>
+        <p>
+          1259 California st
+          <br>
+          San Francisco, CA
+        </p>
+      </div>
+      <div class="icons"><img src="./img/MyLocation.png" id="myLocation"><img src="./img/Pin.png" id="pin"></div>
+    </div>
+  </div>
+  <script>
+    function initMap() {
+    
+        var pin = document.getElementById('pin');
+    
+        var pos = {lat: 37.795426, lng: -122.414854}
+        var map = document.getElementById('map');
+        var options = {
+            zoom: 14,
+            center: pos,
+            disableDefaultUI: true,
+            gestureHandling: 'greedy'
+        };
+    
+        var myMap = new google.maps.Map(map, options);
+    
+        var icon = {
+    
+            path: "M39.839,23.849 C39.866,24.150 39.908,24.426 39.924,24.743 C39.924,24.743 37.037,42.497 21.147,55.018 L21.147,56.011 C20.926,55.848 20.717,55.680 20.500,55.515 C20.283,55.680 20.074,55.848 19.853,56.011 L19.853,55.018 C3.963,42.497 1.076,24.743 1.076,24.743 C1.092,24.421 1.134,24.140 1.162,23.836 C0.912,22.583 0.777,21.288 0.777,19.962 C0.777,9.068 9.607,0.238 20.500,0.238 C31.393,0.238 40.223,9.068 40.223,19.962 C40.223,21.293 40.091,22.593 39.839,23.849 Z",
+            fillColor: '#e75735',
+            fillOpacity: .6,
+            anchor: new google.maps.Point(0, 0),
+            strokeWeight: 0,
+            scale: 1
+        };
+    
+        var marker = new google.maps.Marker({
+            position: pos,
+            map: myMap,
+            icon: icon
+        });
+    
+        pin.addEventListener('click', function () {
+            map.setCenter(pos);
+        });
+    
+    }
+    
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmnW2E9v4j_HBoc9oaqM9R-dWm-_UxcrA&amp;callback=initMap"></script>
+</section>
+      <div class="calendar-and-messaging">
+        <div class="calendar">
+<h1 class="calendar__header">Calendar</h1>
+<div class="calendar-wrapper">
+  <div class="current-day">
+    <div class="date">24</div>
+  </div>
+  <div class="auto-jsCalendar classic-theme" data-day-format="DDD" data-fdotw="2" data-date="24/09/2016"></div>
+  <div class="today">Today</div>
+</div>
+        </div>
+        <div class="messaging">
+<section class="messaging">
+  <h1 class="messaging__header">Messaging</h1>
+  <div class="main">
+    <div class="main__header">
+      <h2>Sarah Brown</h2>
+    </div>
+    <div class="main__header-footer"></div>
+    <div class="main__wrap">
+      <div class="photo-and-icon"><img class="chat" src="./img/Chat Icon.png"><img class="girl-photo" src="./img/Girl.png"><img class="camera" src="./img/Camera Icon.png"></div>
+      <div class="message">
+        <p>
+          Hey! So are we cool to meet at
+          <br>
+          the art gallery? Say 8pm
+        </p>
+      </div>
+      <div class="input-field">
+        <p>
+          Yeah that sounds great. See you
+          <br>
+          then.
+        </p>
+      </div>
+      <button class="button button-color__green button__hovered">Reply</button>
+    </div>
+  </div>
+</section>
+        </div>
+      </div>
+      <!--include src/video/video-->
+    </main>
+  <script type="text/javascript" src="main.bandle.495b6c47f3ef35422567.js?22f18b1264f1bacfc0e0"></script></body>
+</html>
