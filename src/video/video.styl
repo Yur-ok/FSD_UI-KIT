@@ -1,0 +1,143 @@
+.video
+    display: flex
+    flex-direction inherit
+    margin-top: 53px
+    &__header
+        CommonFonts()
+        margin-bottom: 22px
+    & .player
+        display: flex
+        align-self: center
+        width: 85%
+        height: 337px
+        position: relative
+        overflow: hidden
+        border-radius: 5px
+    &:hover #video-controls
+        transform: translateY(0)
+        transition .3s ease
+    &:hover .description
+        transform: translateY(0)
+        transition .3s ease
+
+video
+    width: 100%
+    height: auto
+
+.description
+    position: absolute
+    transform: translateY(-115%)
+    transition .3s ease
+    top: 10px
+    width: 100%
+    & h2, h3, a
+        color: $white
+    & h2
+        font-family: LatoLight
+        font-weight: lighter
+        font-size: 36px
+        letter-spacing: -1px
+        margin: 15px 0 0 40px
+    & h3
+        text-transform: uppercase
+        font-family: LatoBlack
+        font-weight: bold
+        font-size: 12.5px
+        margin: 0 0 0 40px
+        letter-spacing: 1px
+    & a
+        font-family: LatoRegular
+        display: block
+        font-size: 17px
+        margin: 25px 0 0 40px
+        text-decoration: none
+
+#video-controls
+    width: 100%
+    height: 48px
+    position: absolute
+    bottom: 0
+    display: flex
+    background-color: rgba(0, 0, 0, 0.3)
+    transform: translateY(100%)
+    transition .5s ease
+    & button
+        border: none
+        background-color: transparent
+        cursor: pointer
+        background-size: contain
+        background-repeat: no-repeat
+    & .play
+        width: 9%
+        height: auto
+        background-image: url("play.png")
+        background-repeat: no-repeat
+        background-position: center
+        background-size: 10px 14px
+    & .pause
+        width: 8%
+        height: auto
+        background-image: url('./pause.png')
+        background-repeat: no-repeat
+        background-position: center
+        background-size: 22px 22px
+    & .progress
+        width: 79%
+        height: 5px
+        border-radius: 20px
+        border: none
+        background-color: $gray
+        align-self: center
+        cursor: pointer
+        position: relative
+    & .progress-fill
+        background-color: $orange
+        height: 100%
+        width: 0
+    & #fs
+        width: 8%
+        height: auto
+        background-color: $orange
+        background-image: url('./fs.png')
+        background-repeat: no-repeat
+        background-position: center
+        background-size: 22px 22px
+        margin-left: auto
+
+@media screen and (max-width: 426px)
+    .video .player
+        height: 206px
+
+    #video-controls
+        & .play
+            width: 20%
+        & .progress
+            width: 60%
+        & #fs
+            width: 20%
+
+    .description
+        & h2
+            font-size: 25px
+            margin: 0 0 0 20px
+        & h3
+            font-size: 10px
+            margin: 15px 0 0 20px
+        & a
+            font-size: 15px
+            margin: 15px 0 0 20px
+
+@media screen and (max-width: 320px)
+    .video .player
+        height: 156px
+
+    .description
+        & h2
+            font-size: 18px
+            margin: 0 0 0 20px
+        & h3
+            font-size: 10px
+            margin: 15px 0 0 20px
+        & a
+            font-size: 15px
+            margin: 15px 0 0 20px
