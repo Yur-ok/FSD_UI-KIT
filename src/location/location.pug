@@ -1,15 +1,17 @@
 section.location
     h1.location__header Location
-    .googleMap#map
-    .customMapControl
-        h2 Meet us!
-        p.
-            1259 California st
-            <br>
-            San Francisco, CA
-        .icons
-            img(src=require("./MyLocation.png"))#myLocation
-            img(src=require("./Pin.png"))#pin
+    .location__wrapper
+        .googleMap#map
+        .customMapControl
+            .customMapControl__text
+                h2 Meet us!
+                p.
+                    1259 California st
+                    <br>
+                    San Francisco, CA
+            .icons
+                img(src=require("./MyLocation.png"))#myLocation
+                img(src=require("./Pin.png"))#pin
 
     script.
         function initMap() {
