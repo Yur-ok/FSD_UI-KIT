@@ -10,6 +10,7 @@ import 'simple-jscalendar/source/jsCalendar';
 import 'simple-jscalendar/source/jsCalendar.css';
 import 'simple-jscalendar/source/jsCalendar.lang.uk';
 import 'simple-jscalendar/themes/jsCalendar.clean.css';
+import './src/favicons/favicons';
 //ripple effect for buttons
 import { defaultOptions } from 'ripplet.js/es/ripplet-declarative';
 defaultOptions.color = 'rgba(230, 220, 255, .3)';
