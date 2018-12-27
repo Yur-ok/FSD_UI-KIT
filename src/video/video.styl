@@ -1,34 +1,34 @@
-.video
-    display: flex
-    flex-direction inherit
+.video-block
+    margin-left: auto
+    margin-right: auto
     margin-top: 53px
     &__header
         CommonFonts()
-        margin-bottom: 22px
-    & .player
-        display: flex
-        align-self: center
-        width: 85%
-        height: 337px
-        position: relative
-        overflow: hidden
-        border-radius: 5px
-        &:hover #video-controls
-            transform: translateY(0)
-            transition .3s ease
-        &:hover .description
-            transform: translateY(0)
-            transition .3s ease
+        margin-bottom: 23px
 
-video
+.video-container
+    position: relative
+    overflow: hidden
+    max-width: 596px
+    &:hover #player-controls
+        transform: translateY(0)
+        transition .3s ease
+    &:hover .description
+        transform: translateY(0)
+        transition .3s ease
+
+.player
+    background-color: cadetblue
+    border-radius: 5px
+
+.video
     width: 100%
-    height: auto
 
 .description
     position: absolute
-    transform: translateY(-115%)
+    transform: translateY(-100%)
     transition .3s ease
-    top: 10px
+    top: 30px
     width: 100%
     & h2, h3, a
         color: $white
@@ -52,14 +52,14 @@ video
         margin: 25px 0 0 40px
         text-decoration: none
 
-#video-controls
+#player-controls
     width: 100%
     height: 48px
     position: absolute
-    bottom: 0
+    top: 85.5%
     display: flex
     background-color: rgba(0, 0, 0, 0.3)
-    transform: translateY(100%)
+    transform: translateY(140%)
     transition .5s ease
     & button
         border: none
@@ -105,14 +105,12 @@ video
         margin-left: auto
 
 @media screen and (max-width: 426px)
-    .video .player
-        height: 206px
-
-    #video-controls
+    #player-controls
         & .play
             width: 20%
         & .progress
-            width: 60%
+            flex-shrink: 1
+            margin-right: 5px
         & #fs
             width: 20%
 
@@ -128,8 +126,8 @@ video
             margin: 15px 0 0 20px
 
 @media screen and (max-width: 320px)
-    .video .player
-        height: 156px
+    .video-block
+        padding: 0 15px
 
     .description
         & h2

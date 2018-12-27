@@ -10,6 +10,7 @@
     margin: 0 auto
     display: flex
     justify-content: space-between
+    align-items: center
     width: 60%
     & button:first-child
         margin-right: 20px
@@ -57,3 +58,15 @@
     color: $white
     background-color: $gray
     border-color: $gray
+
+@media screen and (max-width: 620px)
+    .arrow-inactive
+    .arrow-disabled
+    .arrow-hovered
+        height: 120px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: center
+        & button:first-child
+            margin-right: 0
