@@ -1,15 +1,16 @@
-section.video
-    h1.video__header Video
+section.video-block
+    h1.video-block__header Video
 
-    .player
-        video(id="video" preload="metadata" poster=require("./poster.png"))
-            source(src=require("./video.mp4") type="video/mp4")
-        .description
-            h2 New Zealand Landscapes Timelapse
-            h3 From Bevan Percival
-            a(href="http://vimeo.com/62980495" target="_blank") http://vimeo.com/62980495
-        #video-controls
-            button(id="playPause").play
-            .progress
-                .progress-fill
-            button(id="fs")
+    .video-container
+        .player
+            video(id="video" class="video" preload="metadata" poster=require("./poster.png"))
+                source(src=require("./video.mp4") type="video/mp4")
+            .description
+                h2 New Zealand Landscapes Timelapse
+                h3 From Bevan Percival
+                a(href="http://vimeo.com/62980495" target="_blank") http://vimeo.com/62980495
+            #player-controls
+                button(id="playPause").play
+                .progress
+                    .progress-fill
+                button(id="fs")
