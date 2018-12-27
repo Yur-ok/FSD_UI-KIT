@@ -2,36 +2,35 @@
 @import "toggles/toggles.styl"
 
 .elements
-    margin-top: 27px
+    margin-top: 30px
+    display: flex
+    flex-direction: inherit
     &__header
         CommonFonts()
     &-wrapper
-        margin-top: 47px
+        margin-top: 49px
+        margin-left: 53px
         display: flex
-    &-wrapper__col1
-        //background: greenyellow
-    &-wrapper__col2
-        //background-color: gold
-        margin-left: 98px
+        width: 75.5%
+        justify-content: space-between
 
 .formFields
     position: relative
     display: flex
     flex-direction: column
     width: 288px
-    margin-left: 52px
     &__name
     &__email
         width: 208px
         height: 26px
-        margin-bottom: 12px
+        margin-bottom: 15px
         font-size: 14px
         background-color: $gray
         border: unset
         border-radius: 3px
     &__message
         height: 82px
-        margin-bottom: 10px
+        margin-bottom: 15px
         font-size: 14px
         background-color: $gray
         border-color: $gray
@@ -61,7 +60,6 @@ textarea::placeholder
     padding: 7px 0 0 10px
 
 .tooltip
-    //visibility: hidden
     position: absolute
     height: 28px
     width: 72px
@@ -95,3 +93,40 @@ textarea::placeholder
             border-color: transparent $orange transparent transparent
         .tooltip.thanks &
             border-color: transparent $green transparent transparent
+
+@media screen and (max-width: 600px)
+    .elements-wrapper
+        flex-direction: column
+        margin-left: 0
+        align-self: center
+        &__col1
+            align-self: center
+        &__col2
+            align-self: center
+            justify-content: space-between
+            margin-top: 40px
+            display: flex
+            flex-direction: row
+            width: 64%
+
+    .elements__toggles
+        display: flex
+        flex-direction: column
+        flex-wrap nowrap
+
+    .toggleses
+        align-self: center
+        flex-wrap nowrap
+
+    .elements__tickBoxes
+        margin-top: 0
+
+@media screen and (max-width: 527px)
+    .elements-wrapper
+        &__col2
+            flex-direction: column
+
+    .elements__tickBoxes
+        margin-top: 40px
+        width: 60%
+        align-self: center
