@@ -28,7 +28,9 @@ body {
 }
 main {
   margin: 0 auto;
-  width: 700px;
+  width: 100%;
+  max-width: 700px;
+  min-width: 320px;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
@@ -216,6 +218,8 @@ main {
   display: flex;
   -webkit-box-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+          align-items: center;
   width: 60%;
 }
 .arrows-wrapper button:first-child {
@@ -270,6 +274,27 @@ main {
   background-color: #e5e5e5;
   border-color: #e5e5e5;
 }
+@media screen and (max-width: 620px) {
+  .arrow-inactive,
+  .arrow-disabled,
+  .arrow-hovered {
+    height: 120px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
+  }
+  .arrow-inactive button:first-child,
+  .arrow-disabled button:first-child,
+  .arrow-hovered button:first-child {
+    margin-right: 0;
+  }
+}
 .percentages {
   margin-top: 47px;
   display: -webkit-box;
@@ -323,6 +348,29 @@ main {
 .jchart__summary {
   font-family: LatoLight;
   alignment-baseline: central;
+}
+@media screen and (max-width: 663px) {
+  .pie-container {
+    -webkit-box-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+            align-items: center;
+  }
+  .pie:nth-child(1) .jchart__donut {
+    margin-left: 0;
+  }
+  .pie:nth-child(2) .jchart__donut {
+    margin-left: 0;
+  }
+  .pie:nth-child(3) .jchart__donut {
+    margin-left: 0;
+  }
+  .pie:nth-child(4) .jchart__donut {
+    margin-left: 0;
+  }
+  .pie:last-child .jchart__donut {
+    margin-left: 0;
+  }
 }
 .irs {
   position: relative;
@@ -1064,6 +1112,8 @@ textarea::placeholder {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
             flex-direction: column;
+    margin-left: 0;
+    align-self: center;
   }
   .elements-wrapper__col1 {
     align-self: center;
@@ -1755,56 +1805,51 @@ textarea::placeholder {
   border-color: #28a290;
   margin-top: 20px;
 }
-.video {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: inherit;
-  -webkit-box-direction: inherit;
-          flex-direction: inherit;
+.video-block {
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 53px;
 }
-.video__header {
+.video-block__header {
   font-family: LatoBlack;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 1.3px;
   font-size: 18px;
   margin: 0;
-  margin-bottom: 22px;
+  margin-bottom: 23px;
 }
-.video .player {
-  display: -webkit-box;
-  display: flex;
-  align-self: center;
-  width: 85%;
-  height: 337px;
+.video-container {
   position: relative;
   overflow: hidden;
+  max-width: 596px;
+}
+.video-container:hover #player-controls {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.video-container:hover .description {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.player {
+  background-color: #5f9ea0;
   border-radius: 5px;
 }
-.video .player:hover #video-controls {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-}
-.video .player:hover .description {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-}
-video {
+.video {
   width: 100%;
-  height: auto;
 }
 .description {
   position: absolute;
-  -webkit-transform: translateY(-115%);
-          transform: translateY(-115%);
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
-  top: 10px;
+  top: 30px;
   width: 100%;
 }
 .description h2,
@@ -1834,27 +1879,27 @@ video {
   margin: 25px 0 0 40px;
   text-decoration: none;
 }
-#video-controls {
+#player-controls {
   width: 100%;
   height: 48px;
   position: absolute;
-  bottom: 0;
+  top: 85.5%;
   display: -webkit-box;
   display: flex;
   background-color: rgba(0,0,0,0.3);
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
+  -webkit-transform: translateY(140%);
+          transform: translateY(140%);
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
 }
-#video-controls button {
+#player-controls button {
   border: none;
   background-color: transparent;
   cursor: pointer;
   background-size: contain;
   background-repeat: no-repeat;
 }
-#video-controls .play {
+#player-controls .play {
   width: 9%;
   height: auto;
   background-image: url(./img/play.png);
@@ -1862,7 +1907,7 @@ video {
   background-position: center;
   background-size: 10px 14px;
 }
-#video-controls .pause {
+#player-controls .pause {
   width: 8%;
   height: auto;
   background-image: url(./img/pause.png);
@@ -1870,7 +1915,7 @@ video {
   background-position: center;
   background-size: 22px 22px;
 }
-#video-controls .progress {
+#player-controls .progress {
   width: 79%;
   height: 5px;
   border-radius: 20px;
@@ -1880,12 +1925,12 @@ video {
   cursor: pointer;
   position: relative;
 }
-#video-controls .progress-fill {
+#player-controls .progress-fill {
   background-color: #e75735;
   height: 100%;
   width: 0;
 }
-#video-controls #fs {
+#player-controls #fs {
   width: 8%;
   height: auto;
   background-color: #e75735;
@@ -1896,16 +1941,14 @@ video {
   margin-left: auto;
 }
 @media screen and (max-width: 426px) {
-  .video .player {
-    height: 206px;
-  }
-  #video-controls .play {
+  #player-controls .play {
     width: 20%;
   }
-  #video-controls .progress {
-    width: 60%;
+  #player-controls .progress {
+    flex-shrink: 1;
+    margin-right: 5px;
   }
-  #video-controls #fs {
+  #player-controls #fs {
     width: 20%;
   }
   .description h2 {
@@ -1922,8 +1965,8 @@ video {
   }
 }
 @media screen and (max-width: 320px) {
-  .video .player {
-    height: 156px;
+  .video-block {
+    padding: 0 15px;
   }
   .description h2 {
     font-size: 18px;
