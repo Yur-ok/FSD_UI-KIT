@@ -45,3 +45,29 @@
 .jchart__summary
     font-family: LatoLight
     alignment-baseline central
+
+@media screen and (max-width: 663px)
+    .pie-container
+        justify-content: space-evenly
+        align-items: center
+
+    .pie
+        &:nth-child(1)
+            & .jchart__donut
+                margin-left: 0
+
+        ^[0]:nth-child(2)
+            & .jchart__donut
+                margin-left: 0
+
+        ^[0]:nth-child(3)
+            & .jchart__donut
+                margin-left: 0
+
+        ^[0]:nth-child(4)
+            & .jchart__donut
+                margin-left: 0
+
+        ^[0]:last-child
+            & .jchart__donut
+                margin-left: 0
