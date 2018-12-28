@@ -1,18 +1,19 @@
 section.searchDD
     h1.searchDD__header Search / drop down
 
-    .searchDD__fields
-        input(type="search" placeholder="Search" id="find")
-        .searchDD-button
+    .searchDD
+        .field_1
+            input(type="text" placeholder="Search")
+            .searchDD-button
 
-    .searchDD__fields
-        input(type="search" placeholder="I've not found what I'm looking for..." id="findNothing").fill
-        .searchDD-button
+        .field_2
+            input(type="text" placeholder="I've not found what I'm looking for...")
+            .searchDD-button
 
-    .select-fields
-        select(id="options")
-            option Choose An Option
-            option One
-            option Two
-            option Three
-        label(for="options")
+        .select-fields
+            select(id="options")
+                option Choose An Option
+                option One
+                option Two
+                option Three
+            label(for="options")
