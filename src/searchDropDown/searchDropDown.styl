@@ -1,44 +1,55 @@
 .searchDD
     display: flex
-    flex-wrap nowrap
     flex-direction: column
+    justify-content: space-between
+    flex-wrap nowrap
+    height: 158px
+
     &__header
         CommonFonts()
         letter-spacing: 0.6px
         margin-bottom: 20px
-    &__fields
-        margin-left: 2px
-        margin-bottom: 16px
-        display: flex
-        width: 288px
-        height: 28px
-        & input[type=search]
-            width: 255px
-            //padding: 4px
-            border: 1px solid transparent
-            border-radius: 3px 0 0 3px
-            background-color: $gray
-            outline: none
-            &::placeholder
-                color: #888888
-                font-size: 14px
-            &.fill
-                background-color: $orange
-                &::placeholder
-                    color: $white
-        & .searchDD-button
-            width: 33px
-            height: 28px
-            border-radius: 0 3px 3px 0
-            background-color: $orange
-            background-image: url(MagGlass.png)
-            background-repeat: no-repeat
-            background-position: 10px 7px
+
+.field_1, .field_2
+    display: flex
+    width: 288px
+    height: 28px
+    & input[type=text]
+        width: 255px
+        padding: 0 13px
+        border: 1px solid transparent
+        border-radius: 3px 0 0 3px
+        outline: none
+        font-size: 14px
+    & ::placeholder
+        padding: 0
+        font-family: sspRegular
+
+
+.field_1
+    & input[type=text]
+        background-color: $gray
+    & ::placeholder
+        color: #888888
+
+.field_2
+    & input[type=text]
+        background-color: $orange
+    & ::placeholder
+        color: $white
+
+.searchDD-button
+    width: 33px
+    height: 28px
+    border-radius: 0 3px 3px 0
+    background-color: $orange
+    background-image: url(mag-glass.png)
+    background-repeat: no-repeat
+    background-position: 10px 7px
+    cursor: pointer
 
 //drop down
 .select-fields
-    margin-top: 2px
-    margin-left: 2px
     width: 288px
     height: 28px
     position: relative
