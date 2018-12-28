@@ -275,6 +275,17 @@ eval("module.exports = __webpack_require__.p + \"src/favicons/mstile-150x150.png
 
 /***/ }),
 
+/***/ "./node_modules/file-loader/dist/cjs.js?name=src/favicons/[name].[ext]!./src/favicons/site.webmanifest":
+/*!*************************************************************************************************************!*\
+  !*** ./node_modules/file-loader/dist/cjs.js?name=src/favicons/[name].[ext]!./src/favicons/site.webmanifest ***!
+  \*************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"src/favicons/site.webmanifest\";\n\n//# sourceURL=webpack:///./src/favicons/site.webmanifest?./node_modules/file-loader/dist/cjs.js?name=src/favicons/%5Bname%5D.%5Bext%5D");
+
+/***/ }),
+
 /***/ "./node_modules/ion-rangeslider/js/ion.rangeSlider.js":
 /*!************************************************************!*\
   !*** ./node_modules/ion-rangeslider/js/ion.rangeSlider.js ***!
@@ -420,14 +431,14 @@ eval("/* WEBPACK VAR INJECTION */(function($) {$(document).ready(function () {\n
 
 /***/ }),
 
-/***/ "./src/favicons sync recursive ./!./!./node_modules/file-loader/dist/cjs.js?name=src/favicons/[name].[ext]!./ \\.(svg|png|ico|xml|json)$":
-/*!****************************************************************************************************************************!*\
-  !*** ./src/favicons sync !./node_modules/file-loader/dist/cjs.js?name=src/favicons/[name].[ext] \.(svg|png|ico|xml|json)$ ***!
-  \****************************************************************************************************************************/
+/***/ "./src/favicons sync recursive ./!./!./node_modules/file-loader/dist/cjs.js?name=src/favicons/[name].[ext]!./ \\.(svg|png|ico|xml|json|webmanifest)$":
+/*!****************************************************************************************************************************************!*\
+  !*** ./src/favicons sync !./node_modules/file-loader/dist/cjs.js?name=src/favicons/[name].[ext] \.(svg|png|ico|xml|json|webmanifest)$ ***!
+  \****************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var map = {\n\t\"./android-chrome-192x192.png\": \"./node_modules/file-loader/dist/cjs.js?name=src/favicons/[name].[ext]!./src/favicons/android-chrome-192x192.png\",\n\t\"./android-chrome-512x512.png\": \"./node_modules/file-loader/dist/cjs.js?name=src/favicons/[name].[ext]!./src/favicons/android-chrome-512x512.png\",\n\t\"./apple-touch-icon.png\": \"./node_modules/file-loader/dist/cjs.js?name=src/favicons/[name].[ext]!./src/favicons/apple-touch-icon.png\",\n\t\"./browserconfig.xml\": \"./node_modules/file-loader/dist/cjs.js?name=src/favicons/[name].[ext]!./src/favicons/browserconfig.xml\",\n\t\"./favicon-16x16.png\": \"./node_modules/file-loader/dist/cjs.js?name=src/favicons/[name].[ext]!./src/favicons/favicon-16x16.png\",\n\t\"./favicon-32x32.png\": \"./node_modules/file-loader/dist/cjs.js?name=src/favicons/[name].[ext]!./src/favicons/favicon-32x32.png\",\n\t\"./favicon.ico\": \"./node_modules/file-loader/dist/cjs.js?name=src/favicons/[name].[ext]!./src/favicons/favicon.ico\",\n\t\"./mstile-150x150.png\": \"./node_modules/file-loader/dist/cjs.js?name=src/favicons/[name].[ext]!./src/favicons/mstile-150x150.png\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tvar id = map[req];\n\tif(!(id + 1)) { // check for number or string\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn id;\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src/favicons sync recursive ./!./!./node_modules/file-loader/dist/cjs.js?name=src/favicons/[name].[ext]!./ \\\\.(svg|png|ico|xml|json)$\";\n\n//# sourceURL=webpack:///./node_modules/file-loader/dist/cjs.js?./src/favicons_sync_");
+eval("var map = {\n\t\"./android-chrome-192x192.png\": \"./node_modules/file-loader/dist/cjs.js?name=src/favicons/[name].[ext]!./src/favicons/android-chrome-192x192.png\",\n\t\"./android-chrome-512x512.png\": \"./node_modules/file-loader/dist/cjs.js?name=src/favicons/[name].[ext]!./src/favicons/android-chrome-512x512.png\",\n\t\"./apple-touch-icon.png\": \"./node_modules/file-loader/dist/cjs.js?name=src/favicons/[name].[ext]!./src/favicons/apple-touch-icon.png\",\n\t\"./browserconfig.xml\": \"./node_modules/file-loader/dist/cjs.js?name=src/favicons/[name].[ext]!./src/favicons/browserconfig.xml\",\n\t\"./favicon-16x16.png\": \"./node_modules/file-loader/dist/cjs.js?name=src/favicons/[name].[ext]!./src/favicons/favicon-16x16.png\",\n\t\"./favicon-32x32.png\": \"./node_modules/file-loader/dist/cjs.js?name=src/favicons/[name].[ext]!./src/favicons/favicon-32x32.png\",\n\t\"./favicon.ico\": \"./node_modules/file-loader/dist/cjs.js?name=src/favicons/[name].[ext]!./src/favicons/favicon.ico\",\n\t\"./mstile-150x150.png\": \"./node_modules/file-loader/dist/cjs.js?name=src/favicons/[name].[ext]!./src/favicons/mstile-150x150.png\",\n\t\"./site.webmanifest\": \"./node_modules/file-loader/dist/cjs.js?name=src/favicons/[name].[ext]!./src/favicons/site.webmanifest\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tvar id = map[req];\n\tif(!(id + 1)) { // check for number or string\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn id;\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src/favicons sync recursive ./!./!./node_modules/file-loader/dist/cjs.js?name=src/favicons/[name].[ext]!./ \\\\.(svg|png|ico|xml|json|webmanifest)$\";\n\n//# sourceURL=webpack:///./node_modules/file-loader/dist/cjs.js?./src/favicons_sync_");
 
 /***/ }),
 
@@ -438,7 +449,7 @@ eval("var map = {\n\t\"./android-chrome-192x192.png\": \"./node_modules/file-loa
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const faviconsContext = __webpack_require__(\"./src/favicons sync recursive ./!./!./node_modules/file-loader/dist/cjs.js?name=src/favicons/[name].[ext]!./ \\\\.(svg|png|ico|xml|json)$\");\r\nfaviconsContext.keys().forEach(faviconsContext);\n\n//# sourceURL=webpack:///./src/favicons/favicons.js?");
+eval("const faviconsContext = __webpack_require__(\"./src/favicons sync recursive ./!./!./node_modules/file-loader/dist/cjs.js?name=src/favicons/[name].[ext]!./ \\\\.(svg|png|ico|xml|json|webmanifest)$\");\nfaviconsContext.keys().forEach(faviconsContext);\n\n//# sourceURL=webpack:///./src/favicons/favicons.js?");
 
 /***/ }),
 

@@ -1,14 +1,18 @@
-.searchDD
+.searchDropDown
     display: flex
     flex-direction: column
     justify-content: space-between
-    flex-wrap nowrap
     height: 158px
 
     &__header
         CommonFonts()
         letter-spacing: 0.6px
-        margin-bottom: 20px
+
+.searchDD
+    display: flex
+    flex-direction inherit
+    justify-content: space-between
+    height: 119px
 
 .field_1, .field_2
     display: flex
@@ -24,7 +28,6 @@
     & ::placeholder
         padding: 0
         font-family: sspRegular
-
 
 .field_1
     & input[type=text]

@@ -106,7 +106,6 @@ module.exports = {
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery',
-            // noUiSlider: 'nouislider',
         }),
         new CleanWebpackPlugin('docs', {}),
         new MiniCssExtractPlugin({

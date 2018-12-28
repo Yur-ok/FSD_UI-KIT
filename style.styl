@@ -36,8 +36,6 @@ main
     min-width: 320px
     display: flex
     flex-direction: column
-    //padding-left: 10px
-    //padding-right: 10px
     padding-top: 82px
     padding-bottom: 110px
 
@@ -47,19 +45,15 @@ main
 @import "./src/sliders/sliders.styl"
 @import "./src/stages/stages.styl"
 @import "./src/formElements/formElements.styl"
-@import "./src/searchDropDown/searchDropDown.styl"
-@import "./src/userProfile/userProfile.styl"
 
 .search-and-userProfile
     margin-top: 65px
     display: flex
-    justify-content: center
+    justify-content: space-between
     align-self: center
     width: 85%
-    & .userPfofile
-        width: 100%
-        display: flex
-        flex-direction: column
+    @import "./src/searchDropDown/searchDropDown.styl"
+    @import "./src/userProfile/userProfile.styl"
 
 @import "./src/newsEvents/newsEvents.styl"
 @import "./src/location/location.styl"

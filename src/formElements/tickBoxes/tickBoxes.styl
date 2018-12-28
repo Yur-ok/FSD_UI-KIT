@@ -9,9 +9,6 @@
 
 .container-wrapper
     display: flex
-    & .left
-        margin-left: 31px
-        margin-right: 20px
 
 /* Customize the label (the container) */
 .container
@@ -24,6 +21,11 @@
     -moz-user-select: none
     -ms-user-select: none
     user-select: none
+    &.left
+        margin-left: 32px
+        margin-right: 20px
+    &.right
+        margin-right: auto
 
 /* Hide the browser's default checkbox */
 .container input
@@ -74,6 +76,3 @@
 @media screen and (max-width: 600px)
     .container-wrapper
         justify-content: space-evenly
-        & .left
-            margin-left: 0
-            margin-right: 0

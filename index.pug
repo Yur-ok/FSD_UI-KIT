@@ -1,5 +1,5 @@
 doctype
-html
+html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1")
@@ -21,11 +21,9 @@ html
             include src/stages/stages
             include src/formElements/formElements
 
-            section.search-and-userProfile
-                section.searchDD
-                    include src/searchDropDown/searchDropDown
-                section.userPfofile
-                    include src/userProfile/userProfile
+            .search-and-userProfile
+                include src/searchDropDown/searchDropDown
+                include src/userProfile/userProfile
 
             include src/newsEvents/newsEvents
             include src/location/location

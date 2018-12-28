@@ -1,24 +1,28 @@
 .userProfile
+    width: 100%
+    display: flex
+    justify-content: space-between
+    flex-direction: column
+    height: 263px
     &__header
         CommonFonts()
 
 .boy
-    margin-top: 25px
-
-.boy, .girl
+.girl
     display: flex
     justify-content: flex-end
-    & .photo
+    .photo
+        align-self: center
         width: 84px
         height: 84px
         border-radius: 50%
         background-color: $gray
-        margin: 7px 17px 0 0
+        margin: 0px 17px 0 0
         box-shadow 0 0 0 4px $gray
-        & img
+        img
             background-size: cover
-    & .info
-        margin-top: 4px
+    .info
+        align-self: center
         display: flex
         flex-direction: column
         align-items: center
@@ -27,42 +31,27 @@
         background-color: $gray
         border-radius: 8px
         position: relative
-        & .name
+        .name
             font-size: 18px
-            color: $orange
             margin-top: 13px
             margin-bottom: 0
-        & .position
+        .position
             font-size: 11px
             text-transform: uppercase
             font-weight: bold
-            color: #4f4f4f
             margin-top: 0
             margin-bottom: 10px
-        & .social-btns
-            width: 105px
-            height: 21px
+        .social-btns
+            width: 123px
+            height: 22px
             display: flex
             justify-content: space-between
             position: relative
-            & .fb, .twit, .drbl
-                position: absolute
-            & .fb
-                width: 22px
-                height: 22px
-                fill: red
-            & .twit
-                width: 40px
-                height: 40px
-                fill: red
-                top: -15px
-                left: 30px
-            & .drbl
-                width: 40px
-                height: 40px
-                fill: red
-                top: -9px
-                left: 70px
+            .icon
+                display: inline-block
+                stroke-width: 0
+                stroke: currentColor
+                fill: currentColor
 
         &::before
             content: ""
@@ -73,11 +62,26 @@
             border-style: solid
             border-color: transparent $gray transparent transparent
 
+.boy
+    .info
+        .name
+            color: $orange
+        .social-btns
+            .icon-facebook
+            .icon-dribbble
+                color: #757575
+            .icon-twitter
+                color: #e75735
+
 .girl
-    margin-top: 23px
-    & .info
+    .info
         background-color: $green
-        & .name, .position
-            color: $white
         &::before
             border-color: transparent $green transparent transparent
+.girl
+    .name
+    .position
+    .icon-facebook
+    .icon-twitter
+    .icon-dribbble
+        color: $white

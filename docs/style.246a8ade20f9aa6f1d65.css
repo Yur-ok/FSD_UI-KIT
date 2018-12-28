@@ -222,8 +222,19 @@ main {
           align-items: center;
   width: 60%;
 }
-.arrows-wrapper button:first-child {
-  margin-right: 20px;
+.arrow-inactive,
+.arrow-disabled,
+.arrow-hovered {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  width: 124px;
+}
+.arrow-disabled {
+  -webkit-box-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 170px;
 }
 .buttonArr {
   position: relative;
@@ -274,7 +285,7 @@ main {
   background-color: #e5e5e5;
   border-color: #e5e5e5;
 }
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 600px) {
   .arrow-inactive,
   .arrow-disabled,
   .arrow-hovered {
@@ -288,11 +299,6 @@ main {
             justify-content: space-between;
     -webkit-box-align: center;
             align-items: center;
-  }
-  .arrow-inactive button:first-child,
-  .arrow-disabled button:first-child,
-  .arrow-hovered button:first-child {
-    margin-right: 0;
   }
 }
 .percentages {
@@ -842,10 +848,6 @@ h1.tickBoxes-header {
   display: -webkit-box;
   display: flex;
 }
-.container-wrapper .left {
-  margin-left: 31px;
-  margin-right: 20px;
-}
 .container {
   display: block;
   position: relative;
@@ -856,6 +858,13 @@ h1.tickBoxes-header {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+.container.left {
+  margin-left: 32px;
+  margin-right: 20px;
+}
+.container.right {
+  margin-right: auto;
 }
 .container input {
   position: absolute;
@@ -902,10 +911,6 @@ h1.tickBoxes-header {
   .container-wrapper {
     -webkit-box-pack: space-evenly;
             justify-content: space-evenly;
-  }
-  .container-wrapper .left {
-    margin-left: 0;
-    margin-right: 0;
   }
 }
 .toggles-header {
@@ -1006,21 +1011,22 @@ h1.toggles-header {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
   width: 288px;
+  height: 215px;
 }
 .formFields__name,
 .formFields__email {
   width: 208px;
-  height: 26px;
-  margin-bottom: 15px;
+  height: 28px;
   font-size: 14px;
   background-color: #e5e5e5;
   border: unset;
   border-radius: 3px;
 }
 .formFields__message {
-  height: 82px;
-  margin-bottom: 15px;
+  height: 85px;
   font-size: 14px;
   background-color: #e5e5e5;
   border-color: #e5e5e5;
@@ -1158,15 +1164,26 @@ textarea::placeholder {
     align-self: center;
   }
 }
-.searchDD {
+.search-and-userProfile {
+  margin-top: 65px;
   display: -webkit-box;
   display: flex;
-  flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  align-self: center;
+  width: 85%;
+}
+.search-and-userProfile .searchDropDown {
+  display: -webkit-box;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  height: 158px;
 }
-.searchDD__header {
+.search-and-userProfile .searchDropDown__header {
   font-family: LatoBlack;
   text-transform: uppercase;
   text-align: center;
@@ -1174,71 +1191,99 @@ textarea::placeholder {
   font-size: 18px;
   margin: 0;
   letter-spacing: 0.6px;
-  margin-bottom: 20px;
 }
-.searchDD__fields {
-  margin-left: 2px;
-  margin-bottom: 16px;
+.search-and-userProfile .searchDD {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: inherit;
+  -webkit-box-direction: inherit;
+          flex-direction: inherit;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  height: 119px;
+}
+.search-and-userProfile .field_1,
+.search-and-userProfile .field_2 {
   display: -webkit-box;
   display: flex;
   width: 288px;
   height: 28px;
 }
-.searchDD__fields input[type=search] {
+.search-and-userProfile .field_1 input[type=text],
+.search-and-userProfile .field_2 input[type=text] {
   width: 255px;
+  padding: 0 13px;
   border: 1px solid transparent;
   border-radius: 3px 0 0 3px;
-  background-color: #e5e5e5;
   outline: none;
-}
-.searchDD__fields input[type=search]::-webkit-input-placeholder {
-  color: #888;
   font-size: 14px;
 }
-.searchDD__fields input[type=search]:-ms-input-placeholder {
-  color: #888;
-  font-size: 14px;
+.search-and-userProfile .field_1 ::-webkit-input-placeholder,
+.search-and-userProfile .field_2 ::-webkit-input-placeholder {
+  padding: 0;
+  font-family: sspRegular;
 }
-.searchDD__fields input[type=search]::-ms-input-placeholder {
-  color: #888;
-  font-size: 14px;
+.search-and-userProfile .field_1 :-ms-input-placeholder,
+.search-and-userProfile .field_2 :-ms-input-placeholder {
+  padding: 0;
+  font-family: sspRegular;
 }
-.searchDD__fields input[type=search]::placeholder {
-  color: #888;
-  font-size: 14px;
+.search-and-userProfile .field_1 ::-ms-input-placeholder,
+.search-and-userProfile .field_2 ::-ms-input-placeholder {
+  padding: 0;
+  font-family: sspRegular;
 }
-.searchDD__fields input[type=search].fill {
+.search-and-userProfile .field_1 ::placeholder,
+.search-and-userProfile .field_2 ::placeholder {
+  padding: 0;
+  font-family: sspRegular;
+}
+.search-and-userProfile .field_1 input[type=text] {
+  background-color: #e5e5e5;
+}
+.search-and-userProfile .field_1 ::-webkit-input-placeholder {
+  color: #888;
+}
+.search-and-userProfile .field_1 :-ms-input-placeholder {
+  color: #888;
+}
+.search-and-userProfile .field_1 ::-ms-input-placeholder {
+  color: #888;
+}
+.search-and-userProfile .field_1 ::placeholder {
+  color: #888;
+}
+.search-and-userProfile .field_2 input[type=text] {
   background-color: #e75735;
 }
-.searchDD__fields input[type=search].fill::-webkit-input-placeholder {
+.search-and-userProfile .field_2 ::-webkit-input-placeholder {
   color: #fff;
 }
-.searchDD__fields input[type=search].fill:-ms-input-placeholder {
+.search-and-userProfile .field_2 :-ms-input-placeholder {
   color: #fff;
 }
-.searchDD__fields input[type=search].fill::-ms-input-placeholder {
+.search-and-userProfile .field_2 ::-ms-input-placeholder {
   color: #fff;
 }
-.searchDD__fields input[type=search].fill::placeholder {
+.search-and-userProfile .field_2 ::placeholder {
   color: #fff;
 }
-.searchDD__fields .searchDD-button {
+.search-and-userProfile .searchDD-button {
   width: 33px;
   height: 28px;
   border-radius: 0 3px 3px 0;
   background-color: #e75735;
-  background-image: url(./img/MagGlass.png);
+  background-image: url(./img/mag-glass.png);
   background-repeat: no-repeat;
   background-position: 10px 7px;
+  cursor: pointer;
 }
-.select-fields {
-  margin-top: 2px;
-  margin-left: 2px;
+.search-and-userProfile .select-fields {
   width: 288px;
   height: 28px;
   position: relative;
 }
-.select-fields label {
+.search-and-userProfile .select-fields label {
   position: absolute;
   width: 33px;
   height: 28px;
@@ -1249,7 +1294,7 @@ textarea::placeholder {
   border-radius: 0 3px 3px 0;
   cursor: pointer;
 }
-.select-fields label:after {
+.search-and-userProfile .select-fields label:after {
   content: ' ';
   display: block;
   position: absolute;
@@ -1262,7 +1307,7 @@ textarea::placeholder {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
-.select-fields .dropdown-active:after {
+.search-and-userProfile .select-fields .dropdown-active:after {
   content: ' ';
   display: block;
   position: absolute;
@@ -1275,7 +1320,18 @@ textarea::placeholder {
   -webkit-transform: rotate(225deg);
           transform: rotate(225deg);
 }
-.userProfile__header {
+.search-and-userProfile .userProfile {
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  height: 263px;
+}
+.search-and-userProfile .userProfile__header {
   font-family: LatoBlack;
   text-transform: uppercase;
   text-align: center;
@@ -1283,32 +1339,30 @@ textarea::placeholder {
   font-size: 18px;
   margin: 0;
 }
-.boy {
-  margin-top: 25px;
-}
-.boy,
-.girl {
+.search-and-userProfile .boy,
+.search-and-userProfile .girl {
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: end;
           justify-content: flex-end;
 }
-.boy .photo,
-.girl .photo {
+.search-and-userProfile .boy .photo,
+.search-and-userProfile .girl .photo {
+  align-self: center;
   width: 84px;
   height: 84px;
   border-radius: 50%;
   background-color: #e5e5e5;
-  margin: 7px 17px 0 0;
+  margin: 0px 17px 0 0;
   box-shadow: 0 0 0 4px #e5e5e5;
 }
-.boy .photo img,
-.girl .photo img {
+.search-and-userProfile .boy .photo img,
+.search-and-userProfile .girl .photo img {
   background-size: cover;
 }
-.boy .info,
-.girl .info {
-  margin-top: 4px;
+.search-and-userProfile .boy .info,
+.search-and-userProfile .girl .info {
+  align-self: center;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
@@ -1322,64 +1376,39 @@ textarea::placeholder {
   border-radius: 8px;
   position: relative;
 }
-.boy .info .name,
-.girl .info .name {
+.search-and-userProfile .boy .info .name,
+.search-and-userProfile .girl .info .name {
   font-size: 18px;
-  color: #e75735;
   margin-top: 13px;
   margin-bottom: 0;
 }
-.boy .info .position,
-.girl .info .position {
+.search-and-userProfile .boy .info .position,
+.search-and-userProfile .girl .info .position {
   font-size: 11px;
   text-transform: uppercase;
   font-weight: bold;
-  color: #4f4f4f;
   margin-top: 0;
   margin-bottom: 10px;
 }
-.boy .info .social-btns,
-.girl .info .social-btns {
-  width: 105px;
-  height: 21px;
+.search-and-userProfile .boy .info .social-btns,
+.search-and-userProfile .girl .info .social-btns {
+  width: 123px;
+  height: 22px;
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: justify;
           justify-content: space-between;
   position: relative;
 }
-.boy .info .social-btns .fb,
-.girl .info .social-btns .fb,
-.boy .info .social-btns .twit,
-.girl .info .social-btns .twit,
-.boy .info .social-btns .drbl,
-.girl .info .social-btns .drbl {
-  position: absolute;
+.search-and-userProfile .boy .info .social-btns .icon,
+.search-and-userProfile .girl .info .social-btns .icon {
+  display: inline-block;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
 }
-.boy .info .social-btns .fb,
-.girl .info .social-btns .fb {
-  width: 22px;
-  height: 22px;
-  fill: #f00;
-}
-.boy .info .social-btns .twit,
-.girl .info .social-btns .twit {
-  width: 40px;
-  height: 40px;
-  fill: #f00;
-  top: -15px;
-  left: 30px;
-}
-.boy .info .social-btns .drbl,
-.girl .info .social-btns .drbl {
-  width: 40px;
-  height: 40px;
-  fill: #f00;
-  top: -9px;
-  left: 70px;
-}
-.boy .info::before,
-.girl .info::before {
+.search-and-userProfile .boy .info::before,
+.search-and-userProfile .girl .info::before {
   content: "";
   position: absolute;
   top: calc(50% - 7px);
@@ -1388,35 +1417,28 @@ textarea::placeholder {
   border-style: solid;
   border-color: transparent #e5e5e5 transparent transparent;
 }
-.girl {
-  margin-top: 23px;
+.search-and-userProfile .boy .info .name {
+  color: #e75735;
 }
-.girl .info {
+.search-and-userProfile .boy .info .social-btns .icon-facebook,
+.search-and-userProfile .boy .info .social-btns .icon-dribbble {
+  color: #757575;
+}
+.search-and-userProfile .boy .info .social-btns .icon-twitter {
+  color: #e75735;
+}
+.search-and-userProfile .girl .info {
   background-color: #4eb7a8;
 }
-.girl .info .name,
-.girl .info .position {
-  color: #fff;
-}
-.girl .info::before {
+.search-and-userProfile .girl .info::before {
   border-color: transparent #4eb7a8 transparent transparent;
 }
-.search-and-userProfile {
-  margin-top: 65px;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-pack: center;
-          justify-content: center;
-  align-self: center;
-  width: 85%;
-}
-.search-and-userProfile .userPfofile {
-  width: 100%;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
+.search-and-userProfile .girl .name,
+.search-and-userProfile .girl .position,
+.search-and-userProfile .girl .icon-facebook,
+.search-and-userProfile .girl .icon-twitter,
+.search-and-userProfile .girl .icon-dribbble {
+  color: #fff;
 }
 .news {
   margin-top: 95px;
