@@ -10,9 +10,6 @@ html
         link(rel="icon" type="image/png" sizes="16x16" href="src/favicons/favicon-16x16.png")
         link(rel="manifest" href="src/favicons/site.webmanifest")
         link(rel="shortcut icon" href="src/favicons/favicon.ico")
-        meta(name="msapplication-TileColor" content="#da532c")
-        meta(name="msapplication-config" content="src/favicons/browserconfig.xml")
-        meta(name="theme-color" content="#8dc642")
         title UI-KIT
 
     body
@@ -34,8 +31,8 @@ html
             include src/location/location
 
             .calendar-and-messaging
-                .calendar
+                section.calendar
                     include src/calendar/calendar
-                .messaging
+                section.messaging
                     include src/messaging/messaging
             include src/video/video
